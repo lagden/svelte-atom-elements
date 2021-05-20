@@ -1,6 +1,5 @@
 /* istanbul ignore file */
 import Checkbox from './base/Checkbox.svelte'
-import CheckboxGroup from './base/CheckboxGroup.svelte'
 import Input from './base/Input.svelte'
 import Label from './base/Label.svelte'
 import Select from './base/Select.svelte'
@@ -12,7 +11,6 @@ import Text from './compose/Text.svelte'
 
 export {
 	Checkbox,
-	CheckboxGroup,
 	Input,
 	Label,
 	Select,

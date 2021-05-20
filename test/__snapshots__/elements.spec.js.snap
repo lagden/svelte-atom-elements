@@ -104,11 +104,13 @@ exports[`CheckGroup should match snapshot props 1`] = `
       >
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox"
+          class="_atom_frm__label _atom_frm__label___checkbox _atom_frm__label___required"
+          required="true"
         >
           <input
             class="_atom_frm__checkbox"
             name="test"
+            required=""
             showerror="false"
             type="checkbox"
             value="a"
@@ -123,11 +125,13 @@ exports[`CheckGroup should match snapshot props 1`] = `
         </label>
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox"
+          class="_atom_frm__label _atom_frm__label___checkbox _atom_frm__label___required"
+          required="true"
         >
           <input
             class="_atom_frm__checkbox"
             name="test"
+            required=""
             showerror="false"
             type="checkbox"
             value="b"
@@ -142,11 +146,13 @@ exports[`CheckGroup should match snapshot props 1`] = `
         </label>
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox"
+          class="_atom_frm__label _atom_frm__label___checkbox _atom_frm__label___required"
+          required="true"
         >
           <input
             class="_atom_frm__checkbox"
             name="test"
+            required=""
             showerror="false"
             type="checkbox"
             value="c"
@@ -183,29 +189,6 @@ exports[`Checkbox should match snapshot props 1`] = `
       class="_atom_frm__checkbox customCss _atom_frm__checkbox___switch"
       required=""
       type="checkbox"
-    />
-  </div>
-</body>
-`;
-
-exports[`CheckboxGroup should match snapshot default 1`] = `
-<body>
-  <div>
-    <input
-      class="_atom_frm__checkbox"
-      type="checkbox"
-    />
-  </div>
-</body>
-`;
-
-exports[`CheckboxGroup should match snapshot props 1`] = `
-<body>
-  <div>
-    <input
-      class="_atom_frm__checkbox customCss _atom_frm__checkbox___switch"
-      type="checkbox"
-      value="b"
     />
   </div>
 </body>

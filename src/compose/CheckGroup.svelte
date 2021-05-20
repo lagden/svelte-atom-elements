@@ -1,10 +1,10 @@
 <script>
 	import Label from '../base/Label.svelte'
-	import CheckboxGroup from '../base/CheckboxGroup.svelte'
 
 	export let name
 	export let group = []
 	export let options = []
+	export let switchMode = false
 	export let label = undefined
 	export let id = undefined
 
@@ -28,7 +28,10 @@
 				disabled={$$restProps.disabled}
 				required={$$restProps.required}
 			>
-				<CheckboxGroup
+				<input
+					type="checkbox"
+					class="_atom_frm__checkbox"
+					class:_atom_frm__checkbox___switch={switchMode}
 					bind:group
 					on:blur
 					on:focus
@@ -37,7 +40,7 @@
 					{name}
 					{value}
 					{...$$restProps}
-				/>
+				>
 				<span aria-label="{text}">{text}</span>
 			</Label>
 		{/each}

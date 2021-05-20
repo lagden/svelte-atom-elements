@@ -3,7 +3,6 @@
 import {cleanup, render} from '@testing-library/svelte'
 import {
 	Checkbox,
-	CheckboxGroup,
 	Input,
 	Label,
 	Select,
@@ -29,27 +28,6 @@ describe('Checkbox', () => {
 				switchMode: true,
 				class: 'customCss',
 				required: true
-			}
-		})
-		expect(container).toMatchSnapshot()
-	})
-})
-
-describe('CheckboxGroup', () => {
-	afterEach(cleanup)
-
-	test('should match snapshot default', () => {
-		const {container} = render(CheckboxGroup)
-		expect(container).toMatchSnapshot()
-	})
-
-	test('should match snapshot props', () => {
-		const {container} = render(CheckboxGroup, {
-			props: {
-				group: ['a', 'b', 'c'],
-				switchMode: true,
-				class: 'customCss',
-				value: 'b'
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -174,7 +152,8 @@ describe('CheckGroup', () => {
 		const {container} = render(CheckGroup, {
 			props: {
 				name: 'test',
-				id: 'test_choices'
+				id: 'test_choices',
+				disabled: true
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -193,7 +172,8 @@ describe('CheckGroup', () => {
 				],
 				showError: false,
 				label: 'Choices:',
-				id: 'test_choices'
+				id: 'test_choices',
+				required: true
 			}
 		})
 		expect(container).toMatchSnapshot()
