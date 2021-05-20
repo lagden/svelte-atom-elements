@@ -1,0 +1,442 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Check should match snapshot default 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    >
+       
+      <label
+        class="_atom_frm__label _atom_frm__label___checkbox"
+        for="test_e4jnnidkdo"
+      >
+        <input
+          class="_atom_frm__checkbox"
+          id="test_e4jnnidkdo"
+          name="test"
+          type="checkbox"
+        />
+         
+        
+      </label>
+       
+      <small
+        class="_atom_frm__error___message"
+        title=""
+      >
+        
+      </small>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Check should match snapshot props 1`] = `
+<body>
+  <div>
+    <div
+      class="customCss"
+    >
+      <span
+        class="_atom_frm__label"
+        id="test_f3fogn8lkglf_label"
+      >
+        Do you agree with the terms?
+      </span>
+       
+      <label
+        class="_atom_frm__label _atom_frm__label___checkbox"
+        for="test_f3fogn8lkglf"
+      >
+        <input
+          class="_atom_frm__checkbox"
+          id="test_f3fogn8lkglf"
+          name="test"
+          type="checkbox"
+        />
+         
+        <span
+          aria-label="agree"
+        >
+          agree
+        </span>
+        
+      </label>
+       
+    </div>
+  </div>
+</body>
+`;
+
+exports[`CheckGroup should match snapshot default 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    >
+       
+      <div
+        aria-labelledby="test_mpb4e4him62h_label"
+        class="_atom_frm__checkbox_group"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`CheckGroup should match snapshot props 1`] = `
+<body>
+  <div>
+    <div
+      class="customCss"
+    >
+      <span
+        class="_atom_frm__label"
+        id="test_choices_label"
+      >
+        Choices:
+      </span>
+       
+      <div
+        aria-labelledby="test_choices_label"
+        class="_atom_frm__checkbox_group"
+      >
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___checkbox"
+        >
+          <input
+            class="_atom_frm__checkbox"
+            name="test"
+            showerror="false"
+            type="checkbox"
+            value="a"
+          />
+           
+          <span
+            aria-label="a"
+          >
+            a
+          </span>
+           
+        </label>
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___checkbox"
+        >
+          <input
+            class="_atom_frm__checkbox"
+            name="test"
+            showerror="false"
+            type="checkbox"
+            value="b"
+          />
+           
+          <span
+            aria-label="b"
+          >
+            b
+          </span>
+           
+        </label>
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___checkbox"
+        >
+          <input
+            class="_atom_frm__checkbox"
+            name="test"
+            showerror="false"
+            type="checkbox"
+            value="c"
+          />
+           
+          <span
+            aria-label="c"
+          >
+            c
+          </span>
+           
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Checkbox should match snapshot default 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__checkbox"
+      type="checkbox"
+    />
+  </div>
+</body>
+`;
+
+exports[`Checkbox should match snapshot props 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__checkbox customCss _atom_frm__checkbox___switch"
+      required=""
+      type="checkbox"
+    />
+  </div>
+</body>
+`;
+
+exports[`CheckboxGroup should match snapshot default 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__checkbox"
+      type="checkbox"
+    />
+  </div>
+</body>
+`;
+
+exports[`CheckboxGroup should match snapshot props 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__checkbox customCss _atom_frm__checkbox___switch"
+      type="checkbox"
+      value="b"
+    />
+  </div>
+</body>
+`;
+
+exports[`Combo should match snapshot default 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    >
+       
+      <select
+        class="_atom_frm__base _atom_frm__select _atom_frm__standard"
+        id="foo"
+        name="test"
+      >
+        
+      </select>
+       
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Combo should match snapshot props 1`] = `
+<body>
+  <div>
+    <div
+      class="customCss"
+    >
+      <label
+        class="_atom_frm__label _atom_frm__label___required"
+        for="test_39jh02840nh8"
+        required="true"
+      >
+        <b>
+          Test
+        </b>
+        
+      </label>
+       
+      <select
+        class="_atom_frm__base _atom_frm__select _atom_frm__outline"
+        id="test_39jh02840nh8"
+        name="test"
+        required=""
+      >
+        
+      </select>
+       
+      <small
+        class="_atom_frm__error___message"
+        title="Constraints not satisfied"
+      >
+        Constraints not satisfied
+      </small>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Input invalid type 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__base "
+      type="text"
+    />
+  </div>
+</body>
+`;
+
+exports[`Input should match snapshot default 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__base "
+      type="text"
+    />
+  </div>
+</body>
+`;
+
+exports[`Input should match snapshot props 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__base customCss"
+      required=""
+      type="tel"
+    />
+  </div>
+</body>
+`;
+
+exports[`Label should match snapshot default 1`] = `
+<body>
+  <div>
+    <label
+      class="_atom_frm__label"
+    />
+  </div>
+</body>
+`;
+
+exports[`Label should match snapshot props 1`] = `
+<body>
+  <div>
+    <label
+      class="_atom_frm__label customCss _atom_frm__label___required"
+      data-test="1"
+      disabled="false"
+      for="inputID"
+      required="true"
+    />
+  </div>
+</body>
+`;
+
+exports[`Label should match snapshot with slot 1`] = `
+<body>
+  <div>
+    <label
+      class="_atom_frm__label _atom_frm__label___disabled"
+      disabled="true"
+      for="test"
+      required="false"
+    >
+      Test 
+      <b>
+        bold
+      </b>
+    </label>
+  </div>
+</body>
+`;
+
+exports[`Select should match snapshot default 1`] = `
+<body>
+  <div>
+    <select
+      class="_atom_frm__base _atom_frm__select "
+    >
+      
+    </select>
+  </div>
+</body>
+`;
+
+exports[`Select should match snapshot props 1`] = `
+<body>
+  <div>
+    <select
+      class="_atom_frm__base _atom_frm__select customCss"
+      required=""
+    >
+      <option
+        disabled=""
+        value=""
+      >
+        Selecione
+      </option>
+      
+      <option
+        value="1"
+      >
+        Tadashi
+      </option>
+      <option
+        value="2"
+      >
+        Takamoto
+      </option>
+      
+    </select>
+  </div>
+</body>
+`;
+
+exports[`Text should match snapshot default 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    >
+       
+      <input
+        class="_atom_frm__base _atom_frm__standard"
+        id="test_i8nj1bem620g"
+        name="test"
+        type="text"
+      />
+       
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Text should match snapshot props 1`] = `
+<body>
+  <div>
+    <div
+      class="customCss"
+    >
+      <label
+        class="_atom_frm__label _atom_frm__label___required"
+        for="bar"
+        required="true"
+      >
+        <b>
+          Test
+        </b>
+        
+      </label>
+       
+      <input
+        class="_atom_frm__base _atom_frm__outline"
+        id="bar"
+        name="test"
+        required=""
+        type="tel"
+      />
+       
+      <small
+        class="_atom_frm__error___message"
+        title="Constraints not satisfied"
+      >
+        Constraints not satisfied
+      </small>
+    </div>
+  </div>
+</body>
+`;
