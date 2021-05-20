@@ -9,11 +9,11 @@ exports[`Check should match snapshot default 1`] = `
        
       <label
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="test_a5d2fp8o1e17"
+        for="test"
       >
         <input
           class="_atom_frm__checkbox"
-          id="test_a5d2fp8o1e17"
+          id="test"
           name="test"
           type="checkbox"
         />
@@ -40,18 +40,18 @@ exports[`Check should match snapshot props 1`] = `
     >
       <span
         class="_atom_frm__label"
-        id="test_d4bdni38i76e_label"
+        id="test_label"
       >
         Do you agree with the terms?
       </span>
        
       <label
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="test_d4bdni38i76e"
+        for="test"
       >
         <input
           class="_atom_frm__checkbox"
-          id="test_d4bdni38i76e"
+          id="test"
           name="test"
           type="checkbox"
         />
@@ -77,7 +77,7 @@ exports[`CheckGroup should match snapshot default 1`] = `
     >
        
       <div
-        aria-labelledby="test_ohl0f4598lna_label"
+        aria-labelledby="test_choices_label"
         class="_atom_frm__checkbox_group"
       />
     </div>
@@ -220,7 +220,7 @@ exports[`Combo should match snapshot default 1`] = `
        
       <select
         class="_atom_frm__base _atom_frm__select _atom_frm__standard"
-        id="foo"
+        id="test"
         name="test"
       >
         
@@ -239,7 +239,7 @@ exports[`Combo should match snapshot props 1`] = `
     >
       <label
         class="_atom_frm__label _atom_frm__label___required"
-        for="test_0o5ji7kd1gpfh"
+        for="test"
         required="true"
       >
         <b>
@@ -250,7 +250,7 @@ exports[`Combo should match snapshot props 1`] = `
        
       <select
         class="_atom_frm__base _atom_frm__select _atom_frm__outline"
-        id="test_0o5ji7kd1gpfh"
+        id="test"
         name="test"
         required=""
       >
@@ -395,7 +395,7 @@ exports[`Text should match snapshot default 1`] = `
        
       <input
         class="_atom_frm__base _atom_frm__standard"
-        id="test_daphm5gampc"
+        id="test"
         name="test"
         type="text"
       />
@@ -413,7 +413,7 @@ exports[`Text should match snapshot props 1`] = `
     >
       <label
         class="_atom_frm__label _atom_frm__label___required"
-        for="bar"
+        for="test"
         required="true"
       >
         <b>
@@ -424,7 +424,7 @@ exports[`Text should match snapshot props 1`] = `
        
       <input
         class="_atom_frm__base _atom_frm__outline"
-        id="bar"
+        id="test"
         name="test"
         required=""
         type="tel"

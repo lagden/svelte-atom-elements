@@ -144,7 +144,8 @@ describe('Check', () => {
 	test('should match snapshot default', () => {
 		const {container} = render(Check, {
 			props: {
-				name: 'test'
+				name: 'test',
+				id: 'test'
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -158,7 +159,8 @@ describe('Check', () => {
 				checked: true,
 				showError: false,
 				label: 'Do you agree with the terms?',
-				labelCheck: 'agree'
+				labelCheck: 'agree',
+				id: 'test'
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -171,7 +173,8 @@ describe('CheckGroup', () => {
 	test('should match snapshot default', () => {
 		const {container} = render(CheckGroup, {
 			props: {
-				name: 'test'
+				name: 'test',
+				id: 'test_choices'
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -206,7 +209,7 @@ describe('Combo', () => {
 				name: 'test',
 				outline: false,
 				showError: false,
-				id: 'foo'
+				id: 'test'
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -218,7 +221,8 @@ describe('Combo', () => {
 				name: 'test',
 				label: '<b>Test</b>',
 				class: 'customCss',
-				required: true
+				required: true,
+				id: 'test'
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -234,7 +238,8 @@ describe('Text', () => {
 				name: 'test',
 				value: 1,
 				outline: false,
-				showError: false
+				showError: false,
+				id: 'test'
 			}
 		})
 		expect(container).toMatchSnapshot()
@@ -248,7 +253,7 @@ describe('Text', () => {
 				label: '<b>Test</b>',
 				type: 'tel',
 				required: true,
-				id: 'bar'
+				id: 'test'
 			}
 		})
 		expect(container).toMatchSnapshot()
