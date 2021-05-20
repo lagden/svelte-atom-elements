@@ -26,10 +26,11 @@
     "eslint": "eslint --config .eslintrc.cjs --ext .js --ignore-path .gitignore .",
     "rm": "rm -rf dist",
     "rollup": "rollup -c",
-    "build": "run-s test rm rollup",
+    "build": "run-s test:update rm rollup",
     "prepublishOnly": "npm run build",
     "pretest": "npm run eslint",
     "test": "jest test --coverage --coverageReporters=lcov --coverageReporters=text",
+    "test:update": "npm test -- -u",
     "test:watch": "npm test -- --watch"
   },
   "devDependencies": {

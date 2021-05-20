@@ -9,11 +9,11 @@ exports[`Check should match snapshot default 1`] = `
        
       <label
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="test_e4jnnidkdo"
+        for="test_a5d2fp8o1e17"
       >
         <input
           class="_atom_frm__checkbox"
-          id="test_e4jnnidkdo"
+          id="test_a5d2fp8o1e17"
           name="test"
           type="checkbox"
         />
@@ -40,18 +40,18 @@ exports[`Check should match snapshot props 1`] = `
     >
       <span
         class="_atom_frm__label"
-        id="test_f3fogn8lkglf_label"
+        id="test_d4bdni38i76e_label"
       >
         Do you agree with the terms?
       </span>
        
       <label
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="test_f3fogn8lkglf"
+        for="test_d4bdni38i76e"
       >
         <input
           class="_atom_frm__checkbox"
-          id="test_f3fogn8lkglf"
+          id="test_d4bdni38i76e"
           name="test"
           type="checkbox"
         />
@@ -77,7 +77,7 @@ exports[`CheckGroup should match snapshot default 1`] = `
     >
        
       <div
-        aria-labelledby="test_mpb4e4him62h_label"
+        aria-labelledby="test_ohl0f4598lna_label"
         class="_atom_frm__checkbox_group"
       />
     </div>
@@ -239,7 +239,7 @@ exports[`Combo should match snapshot props 1`] = `
     >
       <label
         class="_atom_frm__label _atom_frm__label___required"
-        for="test_39jh02840nh8"
+        for="test_0o5ji7kd1gpfh"
         required="true"
       >
         <b>
@@ -250,7 +250,7 @@ exports[`Combo should match snapshot props 1`] = `
        
       <select
         class="_atom_frm__base _atom_frm__select _atom_frm__outline"
-        id="test_39jh02840nh8"
+        id="test_0o5ji7kd1gpfh"
         name="test"
         required=""
       >
@@ -395,7 +395,7 @@ exports[`Text should match snapshot default 1`] = `
        
       <input
         class="_atom_frm__base _atom_frm__standard"
-        id="test_i8nj1bem620g"
+        id="test_daphm5gampc"
         name="test"
         type="text"
       />
