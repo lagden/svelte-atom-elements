@@ -13,13 +13,13 @@ Svelte components
 ## Install
 
 ```
-$ yarn add @tadashi/svelte-atom-elements@lagden/svelte-atom-elements#1.0.0
+$ yarn add @tadashi/svelte-atom-elements@lagden/svelte-atom-elements#{version}
 ```
 
 or
 
 ```
-$ npm i @tadashi/svelte-atom-elements@lagden/svelte-atom-elements#1.0.0
+$ npm i @tadashi/svelte-atom-elements@lagden/svelte-atom-elements#{version}
 ```
 
 
