@@ -242,9 +242,9 @@ exports[`Combo should match snapshot props 1`] = `
        
       <small
         class="_atom_frm__error___message"
-        title="Constraints not satisfied"
+        title=""
       >
-        Constraints not satisfied
+        
       </small>
     </div>
   </div>
@@ -415,9 +415,9 @@ exports[`Text should match snapshot props 1`] = `
        
       <small
         class="_atom_frm__error___message"
-        title="Constraints not satisfied"
+        title=""
       >
-        Constraints not satisfied
+        
       </small>
     </div>
   </div>
