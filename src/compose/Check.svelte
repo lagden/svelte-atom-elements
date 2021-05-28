@@ -1,5 +1,5 @@
 <script>
-	import {onMount} from 'svelte'
+	import {onMount, tick} from 'svelte'
 
 	import Label from '../base/Label.svelte'
 	import Checkbox from '../base/Checkbox.svelte'
@@ -19,7 +19,8 @@
 	let component
 	let validationMessage = ''
 
-	function updateValidationMessage() {
+	async function updateValidationMessage() {
+		await tick()
 		validationMessage = component?.node?.validationMessage ?? ''
 	}
 
