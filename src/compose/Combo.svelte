@@ -28,11 +28,7 @@
 		validationMessage = component?.node?.validationMessage ?? ''
 	}
 
-	$: {
-		value
-		component
-		updateValidationMessage()
-	}
+	$: value, component, updateValidationMessage()
 
 	onMount(() => {
 		component?.node?.addEventListener('validationMessage', updateValidationMessage)
