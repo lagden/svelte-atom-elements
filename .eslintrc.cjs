@@ -1,27 +1,29 @@
+/* eslint unicorn/prefer-module: 0 */
+
 const ignoreWarnings = new Set([
 	'a11y-no-onchange',
 	'a11y-label-has-associated-control',
-	'missing-custom-element-compile-options'
+	'missing-custom-element-compile-options',
 ])
 
 module.exports = {
 	env: {
 		es2021: true,
 		node: true,
-		browser: true
+		browser: true,
 	},
 	parser: '@babel/eslint-parser',
 	parserOptions: {
 		ecmaVersion: 12,
-		sourceType: 'module'
+		sourceType: 'module',
 	},
 	plugins: ['html', 'svelte3'],
 	extends: ['xo', 'plugin:unicorn/recommended'],
 	overrides: [
 		{
 			files: ['**/*.svelte'],
-			processor: 'svelte3/svelte3'
-		}
+			processor: 'svelte3/svelte3',
+		},
 	],
 	rules: {
 		indent: ['error', 'tab'],
@@ -32,8 +34,8 @@ module.exports = {
 			'error',
 			{
 				before: false,
-				after: true
-			}
+				after: true,
+			},
 		],
 		'no-console': 0,
 		'no-debugger': 0,
@@ -63,19 +65,20 @@ module.exports = {
 				styles: {
 					util: false,
 					path: {
-						named: true
-					}
-				}
-			}
+						named: true,
+					},
+				},
+			},
 		],
 		// 'unicorn/no-abusive-eslint-disable': 0,
 		// Bug do svelte lint
-		'no-multiple-empty-lines': ['error', {max: 2, maxBOF: 2, maxEOF: 0}]
+		'no-multiple-empty-lines': ['error', {max: 2, maxBOF: 2, maxEOF: 0}],
 	},
 	settings: {
-		'svelte3/ignore-warnings': w => {
+		'svelte3/ignore-warnings': (w) => {
 			return ignoreWarnings.has(w && w.code)
 		},
-		'svelte3/ignore-styles': attributes => attributes.postcss || attributes.lang
-	}
+		'svelte3/ignore-styles': (attributes) =>
+			attributes.postcss || attributes.lang,
+	},
 }

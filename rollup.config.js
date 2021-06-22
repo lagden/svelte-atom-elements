@@ -4,7 +4,7 @@ import svelte from 'rollup-plugin-svelte'
 const ignoreWarnings = new Set([
 	'a11y-no-onchange',
 	'a11y-label-has-associated-control',
-	'css-unused-selector'
+	'css-unused-selector',
 ])
 
 export default {
@@ -12,8 +12,8 @@ export default {
 	output: [
 		{
 			file: 'dist/elements.js',
-			format: 'es'
-		}
+			format: 'es',
+		},
 	],
 	plugins: [
 		svelte({
@@ -24,8 +24,8 @@ export default {
 					return
 				}
 				handler(warning)
-			}
+			},
 		}),
-		resolve({browser: true})
-	]
+		resolve({browser: true}),
+	],
 }

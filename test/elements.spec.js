@@ -9,7 +9,7 @@ import {
 	Check,
 	CheckGroup,
 	Combo,
-	Text
+	Text,
 } from '../src/elements.js'
 import SlotLabel from './SlotLabel.svelte'
 
@@ -27,8 +27,8 @@ describe('Checkbox', () => {
 				checked: true,
 				switchMode: true,
 				class: 'customCss',
-				required: true
-			}
+				required: true,
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -48,8 +48,8 @@ describe('Input', () => {
 				value: 'foo',
 				class: 'customCss',
 				type: 'tel',
-				required: true
-			}
+				required: true,
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -57,8 +57,8 @@ describe('Input', () => {
 	test('invalid type', () => {
 		const {container} = render(Input, {
 			props: {
-				type: 'xxx'
-			}
+				type: 'xxx',
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -79,8 +79,8 @@ describe('Label', () => {
 				for: 'inputID',
 				required: true,
 				disabled: false,
-				'data-test': 1
-			}
+				'data-test': 1,
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -105,12 +105,12 @@ describe('Select', () => {
 				value: 2,
 				options: [
 					{value: 1, text: 'Tadashi'},
-					{value: 2, text: 'Takamoto'}
+					{value: 2, text: 'Takamoto'},
 				],
 				first: 'Selecione',
 				class: 'customCss',
-				required: true
-			}
+				required: true,
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -123,8 +123,8 @@ describe('Check', () => {
 		const {container} = render(Check, {
 			props: {
 				name: 'test',
-				id: 'test'
-			}
+				id: 'test',
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -138,8 +138,8 @@ describe('Check', () => {
 				showError: false,
 				label: 'Do you agree with the terms?',
 				labelCheck: 'agree',
-				id: 'test'
-			}
+				id: 'test',
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -153,8 +153,8 @@ describe('CheckGroup', () => {
 			props: {
 				name: 'test',
 				id: 'test_choices',
-				disabled: true
-			}
+				disabled: true,
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -168,13 +168,13 @@ describe('CheckGroup', () => {
 				options: [
 					{value: 'a', text: 'a'},
 					{value: 'b', text: 'b'},
-					{value: 'c', text: 'c'}
+					{value: 'c', text: 'c'},
 				],
 				showError: false,
 				label: 'Choices:',
 				id: 'test_choices',
-				required: true
-			}
+				required: true,
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -189,8 +189,8 @@ describe('Combo', () => {
 				name: 'test',
 				outline: false,
 				showError: false,
-				id: 'test'
-			}
+				id: 'test',
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -202,8 +202,8 @@ describe('Combo', () => {
 				label: '<b>Test</b>',
 				class: 'customCss',
 				required: true,
-				id: 'test'
-			}
+				id: 'test',
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -219,8 +219,8 @@ describe('Text', () => {
 				value: 1,
 				outline: false,
 				showError: false,
-				id: 'test'
-			}
+				id: 'test',
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})
@@ -233,8 +233,8 @@ describe('Text', () => {
 				label: '<b>Test</b>',
 				type: 'tel',
 				required: true,
-				id: 'test'
-			}
+				id: 'test',
+			},
 		})
 		expect(container).toMatchSnapshot()
 	})

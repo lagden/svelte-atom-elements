@@ -18,5 +18,5 @@ export {
 	Check,
 	CheckGroup,
 	Combo,
-	Text
+	Text,
 }
