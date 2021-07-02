@@ -9,9 +9,19 @@ import {
 	Check,
 	CheckGroup,
 	Combo,
+	Radio,
 	Text,
 } from '../src/elements.js'
+
 import SlotLabel from './SlotLabel.svelte'
+
+const options = [
+	{value: 1, text: 'Lagden'},
+	{value: 2, text: 'Takamoto'},
+	{value: 3, text: 'Tadashi'},
+	{value: 4, text: 'Rita'},
+	{value: 5, text: 'Jorge'},
+]
 
 describe('Checkbox', () => {
 	afterEach(cleanup)
@@ -103,10 +113,7 @@ describe('Select', () => {
 		const {container} = render(Select, {
 			props: {
 				value: 2,
-				options: [
-					{value: 1, text: 'Tadashi'},
-					{value: 2, text: 'Takamoto'},
-				],
+				options,
 				first: 'Selecione',
 				class: 'customCss',
 				required: true,
@@ -208,6 +215,38 @@ describe('Combo', () => {
 		expect(container).toMatchSnapshot()
 	})
 })
+
+describe('Radio', () => {
+	afterEach(cleanup)
+
+	test('should match snapshot default', () => {
+		const {container} = render(Radio, {
+			props: {
+				name: 'test',
+				showError: false,
+				id: 'test',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+
+	test('should match snapshot props', () => {
+		const {container} = render(Radio, {
+			props: {
+				options,
+				group: 1,
+				name: 'test',
+				toggleMode: true,
+				class: 'customCss',
+				label: '<b>Test</b>',
+				required: true,
+				id: 'test',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+})
+
 
 describe('Text', () => {
 	afterEach(cleanup)

@@ -37,15 +37,15 @@
 <div class="{className}">
 	{#if label}
 		<span
-			class="_atom_frm__label"
 			id="{$$restProps.id}_label"
+			class="_atom_frm__label"
+			class:_atom_frm__label___disabled={$$restProps?.disabled ?? false}
+			class:_atom_frm__label___required={$$restProps?.required ?? false}
 		>{@html label}</span>
 	{/if}
 	<Label
 		class="_atom_frm__label___checkbox"
 		for="{$$restProps.id}"
-		disabled={$$restProps.disabled}
-		required={$$restProps.required}
 	>
 		<Checkbox
 			bind:this={component}

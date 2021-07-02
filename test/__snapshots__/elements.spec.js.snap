@@ -78,7 +78,7 @@ exports[`CheckGroup should match snapshot default 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class="_atom_frm__checkbox_group"
+        class="_atom_frm__group"
       />
     </div>
   </div>
@@ -92,7 +92,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
       class="customCss"
     >
       <span
-        class="_atom_frm__label"
+        class="_atom_frm__label _atom_frm__label___required"
         id="test_choices_label"
       >
         Choices:
@@ -100,15 +100,15 @@ exports[`CheckGroup should match snapshot props 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class="_atom_frm__checkbox_group"
+        class="_atom_frm__group"
       >
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox _atom_frm__label___required"
-          required="true"
+          class="_atom_frm__label _atom_frm__label___checkbox"
         >
           <input
             class="_atom_frm__checkbox"
+            id="test_choices"
             name="test"
             required=""
             showerror="false"
@@ -125,11 +125,11 @@ exports[`CheckGroup should match snapshot props 1`] = `
         </label>
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox _atom_frm__label___required"
-          required="true"
+          class="_atom_frm__label _atom_frm__label___checkbox"
         >
           <input
             class="_atom_frm__checkbox"
+            id="test_choices"
             name="test"
             required=""
             showerror="false"
@@ -146,11 +146,11 @@ exports[`CheckGroup should match snapshot props 1`] = `
         </label>
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox _atom_frm__label___required"
-          required="true"
+          class="_atom_frm__label _atom_frm__label___checkbox"
         >
           <input
             class="_atom_frm__checkbox"
+            id="test_choices"
             name="test"
             required=""
             showerror="false"
@@ -327,6 +327,160 @@ exports[`Label should match snapshot with slot 1`] = `
 </body>
 `;
 
+exports[`Radio should match snapshot default 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    >
+       
+      <div
+        aria-labelledby="test_label"
+        class="_atom_frm__group"
+      />
+       
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Radio should match snapshot props 1`] = `
+<body>
+  <div>
+    <div
+      class="customCss"
+    >
+      <span
+        class="_atom_frm__label _atom_frm__label___required"
+        id="test_label"
+      >
+        <b>
+          Test
+        </b>
+      </span>
+       
+      <div
+        aria-labelledby="test_label"
+        class="_atom_frm__group _atom_frm__group___toggle"
+      >
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___radio"
+          togglemode="true"
+        >
+          <input
+            class="_atom_frm__radio _atom_frm__radio___toggle"
+            id="test"
+            name="test"
+            required=""
+            type="radio"
+            value="1"
+          />
+           
+          <span
+            aria-label="Lagden"
+          >
+            Lagden
+          </span>
+           
+        </label>
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___radio"
+          togglemode="true"
+        >
+          <input
+            class="_atom_frm__radio _atom_frm__radio___toggle"
+            id="test"
+            name="test"
+            required=""
+            type="radio"
+            value="2"
+          />
+           
+          <span
+            aria-label="Takamoto"
+          >
+            Takamoto
+          </span>
+           
+        </label>
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___radio"
+          togglemode="true"
+        >
+          <input
+            class="_atom_frm__radio _atom_frm__radio___toggle"
+            id="test"
+            name="test"
+            required=""
+            type="radio"
+            value="3"
+          />
+           
+          <span
+            aria-label="Tadashi"
+          >
+            Tadashi
+          </span>
+           
+        </label>
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___radio"
+          togglemode="true"
+        >
+          <input
+            class="_atom_frm__radio _atom_frm__radio___toggle"
+            id="test"
+            name="test"
+            required=""
+            type="radio"
+            value="4"
+          />
+           
+          <span
+            aria-label="Rita"
+          >
+            Rita
+          </span>
+           
+        </label>
+        
+        <label
+          class="_atom_frm__label _atom_frm__label___radio"
+          togglemode="true"
+        >
+          <input
+            class="_atom_frm__radio _atom_frm__radio___toggle"
+            id="test"
+            name="test"
+            required=""
+            type="radio"
+            value="5"
+          />
+           
+          <span
+            aria-label="Jorge"
+          >
+            Jorge
+          </span>
+           
+        </label>
+      </div>
+       
+      <small
+        class="_atom_frm__error___message"
+        title=""
+      >
+        
+      </small>
+    </div>
+  </div>
+</body>
+`;
+
 exports[`Select should match snapshot default 1`] = `
 <body>
   <div>
@@ -356,12 +510,27 @@ exports[`Select should match snapshot props 1`] = `
       <option
         value="1"
       >
-        Tadashi
+        Lagden
       </option>
       <option
         value="2"
       >
         Takamoto
+      </option>
+      <option
+        value="3"
+      >
+        Tadashi
+      </option>
+      <option
+        value="4"
+      >
+        Rita
+      </option>
+      <option
+        value="5"
+      >
+        Jorge
       </option>
       
     </select>
