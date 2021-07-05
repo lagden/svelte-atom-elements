@@ -8,12 +8,11 @@ exports[`Check should match snapshot default 1`] = `
     >
        
       <label
+        aria-labelledby="test_label"
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="test"
       >
         <input
           class="_atom_frm__checkbox"
-          id="test"
           name="test"
           type="checkbox"
         />
@@ -46,12 +45,11 @@ exports[`Check should match snapshot props 1`] = `
       </span>
        
       <label
+        aria-labelledby="test_label"
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="test"
       >
         <input
           class="_atom_frm__checkbox"
-          id="test"
           name="test"
           type="checkbox"
         />
@@ -108,7 +106,6 @@ exports[`CheckGroup should match snapshot props 1`] = `
         >
           <input
             class="_atom_frm__checkbox"
-            id="test_choices"
             name="test"
             required=""
             showerror="false"
@@ -129,7 +126,6 @@ exports[`CheckGroup should match snapshot props 1`] = `
         >
           <input
             class="_atom_frm__checkbox"
-            id="test_choices"
             name="test"
             required=""
             showerror="false"
@@ -150,7 +146,6 @@ exports[`CheckGroup should match snapshot props 1`] = `
         >
           <input
             class="_atom_frm__checkbox"
-            id="test_choices"
             name="test"
             required=""
             showerror="false"
@@ -223,7 +218,6 @@ exports[`Combo should match snapshot props 1`] = `
       <label
         class="_atom_frm__label _atom_frm__label___required"
         for="test"
-        required="true"
       >
         <b>
           Test
@@ -301,9 +295,7 @@ exports[`Label should match snapshot props 1`] = `
     <label
       class="_atom_frm__label customCss _atom_frm__label___required"
       data-test="1"
-      disabled="false"
       for="inputID"
-      required="true"
     />
   </div>
 </body>
@@ -314,9 +306,7 @@ exports[`Label should match snapshot with slot 1`] = `
   <div>
     <label
       class="_atom_frm__label _atom_frm__label___disabled"
-      disabled="true"
       for="test"
-      required="false"
     >
       Test 
       <b>
@@ -366,11 +356,9 @@ exports[`Radio should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          togglemode="true"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
-            id="test"
             name="test"
             required=""
             type="radio"
@@ -387,11 +375,9 @@ exports[`Radio should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          togglemode="true"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
-            id="test"
             name="test"
             required=""
             type="radio"
@@ -408,11 +394,9 @@ exports[`Radio should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          togglemode="true"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
-            id="test"
             name="test"
             required=""
             type="radio"
@@ -429,11 +413,9 @@ exports[`Radio should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          togglemode="true"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
-            id="test"
             name="test"
             required=""
             type="radio"
@@ -450,11 +432,9 @@ exports[`Radio should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          togglemode="true"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
-            id="test"
             name="test"
             required=""
             type="radio"
@@ -566,7 +546,6 @@ exports[`Text should match snapshot props 1`] = `
       <label
         class="_atom_frm__label _atom_frm__label___required"
         for="test"
-        required="true"
       >
         <b>
           Test

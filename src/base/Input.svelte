@@ -4,6 +4,7 @@
 	// Props
 	export let value = ''
 
+	// CSS
 	let className = ''
 	export {className as class}
 

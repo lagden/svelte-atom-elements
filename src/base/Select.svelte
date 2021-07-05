@@ -1,15 +1,17 @@
 <svelte:options accessors />
 
 <script>
+	// Props
 	export let value = ''
 	export let options = []
 	export let first = false
 
-	// Bind HTML Element
-	export let node = undefined
-
+	// CSS
 	let className = ''
 	export {className as class}
+
+	// Bind HTML Element
+	export let node = undefined
 </script>
 
 <select

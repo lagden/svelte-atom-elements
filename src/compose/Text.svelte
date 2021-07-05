@@ -9,16 +9,15 @@
 	export let outline = true
 	export let showError = true
 	export let label = false
+	export let id = `${name}_${Number(Math.random()).toString(26).slice(2)}`
 
 	let className = ''
 	export {className as class}
 
-	// ID used for label
-	$$restProps.id = $$restProps?.id ?? `${name}_${Number(Math.random()).toString(26).slice(2)}`
-
-	// Class - CSS
+	// Estilo do formulário
 	const styleInput = outline ? '_atom_frm__outline' : '_atom_frm__standard'
 
+	// Validação via API do navegador
 	let component
 	let validationMessage = ''
 
@@ -40,9 +39,9 @@
 <div class="{className}">
 	{#if label}
 		<Label
-			for="{$$restProps.id}"
-			disabled={$$restProps.disabled}
-			required={$$restProps.required}
+			{...(id ? {for: id} : {})}
+			disabled={$$restProps?.disabled ?? false}
+			required={$$restProps?.required ?? false}
 		>{@html label}</Label>
 	{/if}
 	<Input
@@ -55,6 +54,7 @@
 		on:click
 		on:change
 		{name}
+		{...(id ? {id} : {})}
 		{...$$restProps}
 	/>
 	{#if showError}

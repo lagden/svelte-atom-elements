@@ -5,7 +5,7 @@
 	export let checked = undefined
 	export let switchMode = false
 
-	// Props class
+	// CSS
 	let className = ''
 	export {className as class}
 

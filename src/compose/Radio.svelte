@@ -9,13 +9,12 @@
 	export let showError = true
 	export let toggleMode = false
 	export let label = undefined
+	export let id = `${name}_${Number(Math.random()).toString(26).slice(2)}`
 
 	let className = ''
 	export {className as class}
 
-	// ID used for label
-	$$restProps.id = $$restProps?.id ?? `${name}_${Number(Math.random()).toString(26).slice(2)}`
-
+	// Validação via API do navegador
 	let validationMessage = ''
 	let radios
 
@@ -43,14 +42,14 @@
 <div class="{className}">
 	{#if label}
 		<span
-			id="{$$restProps.id}_label"
+			id="{id}_label"
 			class="_atom_frm__label"
 			class:_atom_frm__label___disabled={$$restProps?.disabled ?? false}
 			class:_atom_frm__label___required={$$restProps?.required ?? false}
 		>{@html label}</span>
 	{/if}
 	<div
-		aria-labelledby="{$$restProps.id}_label"
+		aria-labelledby="{id}_label"
 		class="_atom_frm__group"
 		class:_atom_frm__group___toggle={toggleMode}
 	>
