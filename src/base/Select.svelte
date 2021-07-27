@@ -6,6 +6,9 @@
 	export let options = []
 	export let first = false
 
+	let disabled = true
+	export {disabled as first_disabled}
+
 	// CSS
 	let className = ''
 	export {className as class}
@@ -24,7 +27,7 @@
 	{...$$restProps}
 >
 	{#if first}
-		<option value="" disabled selected>{first}</option>
+		<option value="" {disabled} selected>{first}</option>
 	{/if}
 
 	{#if Array.isArray(options) && options.length > 0}

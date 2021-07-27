@@ -115,6 +115,7 @@ describe('Select', () => {
 				value: 2,
 				options,
 				first: 'Selecione',
+				first_disabled: false,
 				class: 'customCss',
 				required: true,
 			},
