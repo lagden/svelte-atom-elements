@@ -11,8 +11,10 @@ export default {
 	input: 'src/elements.js',
 	output: [
 		{
-			file: 'dist/elements.js',
 			format: 'es',
+			entryFileNames: 'elements.js',
+			dir: 'dist',
+			sourcemap: true,
 		},
 	],
 	plugins: [
@@ -28,4 +30,7 @@ export default {
 		}),
 		resolve({browser: true}),
 	],
+	watch: {
+		clearScreen: false,
+	},
 }

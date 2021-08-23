@@ -1,9 +1,11 @@
-/* eslint unicorn/prefer-module: 0 */
+/*eslint unicorn/prefer-module: 0 */
+
+'use strict'
 
 const ignoreWarnings = new Set([
 	'a11y-no-onchange',
 	'a11y-label-has-associated-control',
-	'missing-custom-element-compile-options',
+	'missing-declaration'
 ])
 
 module.exports = {
@@ -39,18 +41,21 @@ module.exports = {
 		],
 		'no-console': 0,
 		'no-debugger': 0,
-		'no-unused-expressions': 0,
-		// 'no-unused-expressions': [
-		// 	'error',
-		// 	{allowShortCircuit: true, allowTernary: true}
-		// ],
+		// 'no-unused-expressions': 0,
+		'no-unused-expressions': [
+			'error',
+			{
+				allowShortCircuit: true,
+				allowTernary: true,
+				allowTaggedTemplates: true,
+			},
+		],
 		camelcase: 0,
 		'capitalized-comments': 0,
 		'spaced-comment': 0,
 		'padding-line-between-statements': 0,
 		'no-undef-init': 0,
 		'no-template-curly-in-string': 0,
-		'no-sequences': 0,
 		'unicorn/filename-case': 0,
 		'unicorn/prevent-abbreviations': 0,
 		'unicorn/no-reduce': 0,
@@ -73,12 +78,10 @@ module.exports = {
 		// 'unicorn/no-abusive-eslint-disable': 0,
 		// Bug do svelte lint
 		'no-multiple-empty-lines': ['error', {max: 2, maxBOF: 2, maxEOF: 0}],
+		'operator-linebreak': ['error', 'after'],
 	},
 	settings: {
-		'svelte3/ignore-warnings': (w) => {
-			return ignoreWarnings.has(w && w.code)
-		},
-		'svelte3/ignore-styles': (attributes) =>
-			attributes.postcss || attributes.lang,
+		'svelte3/ignore-warnings': w => ignoreWarnings.has(w && w.code),
+		'svelte3/ignore-styles': attributes => attributes.postcss || attributes.lang,
 	},
 }

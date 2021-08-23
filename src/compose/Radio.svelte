@@ -8,6 +8,7 @@
 	export let options = []
 	export let showError = true
 	export let toggleMode = false
+	export let outline = false
 	export let label = undefined
 	export let id = `${name}_${Number(Math.random()).toString(26).slice(2)}`
 
@@ -52,6 +53,7 @@
 		aria-labelledby="{id}_label"
 		class="_atom_frm__group"
 		class:_atom_frm__group___toggle={toggleMode}
+		class:_atom_frm__radio___outline={outline}
 	>
 		{#each options as {value, text, props = {}} (`${value}_${text}`)}
 			<Label class="_atom_frm__label___radio" {toggleMode}>
@@ -59,6 +61,7 @@
 					type="radio"
 					class="_atom_frm__radio"
 					class:_atom_frm__radio___toggle={toggleMode}
+					class:_atom_frm__radio___outline={outline}
 					bind:group={group}
 					on:blur
 					on:focus

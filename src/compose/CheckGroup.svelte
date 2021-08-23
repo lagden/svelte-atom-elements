@@ -5,6 +5,7 @@
 	export let group = []
 	export let options = []
 	export let switchMode = false
+	export let outline = false
 	export let label = undefined
 	export let id = `${name}_${Number(Math.random()).toString(26).slice(2)}`
 
@@ -31,6 +32,7 @@
 					type="checkbox"
 					class="_atom_frm__checkbox"
 					class:_atom_frm__checkbox___switch={switchMode}
+					class:_atom_frm__checkbox___outline={outline}
 					bind:group
 					on:blur
 					on:focus
