@@ -3,8 +3,8 @@
 [![Build Status][ci-img]][ci]
 
 
-[ci-img]:  https://github.com/lagden/svelte-atom-elements/workflows/Node.js%20CI/badge.svg
-[ci]:      https://github.com/lagden/svelte-atom-elements/actions?query=workflow%3A%22Node.js+CI%22
+[ci-img]:  https://github.com/lagden/svelte-atom-elements/actions/workflows/nodejs.yml/badge.svg
+[ci]:      https://github.com/lagden/svelte-atom-elements/actions/workflows/nodejs.yml
 
 ---
 
@@ -25,7 +25,7 @@ $ npm i @tadashi/svelte-atom-elements@lagden/svelte-atom-elements#{version}
 
 ## Usage
 
-You can see an example here: https://svelte.dev/repl/d9be5cc526ef49928acdf7c79267ea42?version=3.37.0
+You can see an example here: https://svelte.dev/repl/d9be5cc526ef49928acdf7c79267ea42
 
 
 ## License
