@@ -12,7 +12,21 @@
 	export let node = undefined
 
 	// Mapa dos tipos permitidos
-	const types = new Set(['text', 'password', 'tel', 'email', 'date', 'number', 'search', 'url', 'hidden'])
+	const types = new Set([
+		'date',
+		'datetime-local',
+		'email',
+		'hidden',
+		'month',
+		'number',
+		'password',
+		'search',
+		'tel',
+		'text',
+		'time',
+		'url',
+		'week',
+	])
 	$$restProps.type = $$restProps?.type ?? 'text'
 	$$restProps.type = types.has($$restProps.type) ? $$restProps.type : 'text'
 </script>
