@@ -5,7 +5,8 @@
 const ignoreWarnings = new Set([
 	'a11y-no-onchange',
 	'a11y-label-has-associated-control',
-	'missing-declaration'
+	'css-unused-selector',
+	// 'missing-declaration',
 ])
 
 module.exports = {
@@ -76,6 +77,7 @@ module.exports = {
 				},
 			},
 		],
+		// 'object-shorthand': 0,
 		// 'unicorn/no-abusive-eslint-disable': 0,
 		// Bug do svelte lint
 		'no-multiple-empty-lines': ['error', {max: 2, maxBOF: 2, maxEOF: 0}],
