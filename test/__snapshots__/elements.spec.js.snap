@@ -254,13 +254,13 @@ exports[`Datalist should match snapshot default 1`] = `
        
       <input
         class="_atom_frm__base _atom_frm__outline"
-        id="undefined_4250nl3kakma"
-        list="list_i516ok9cio3"
+        id="test"
+        list="test_list"
         type="text"
       />
        
       <datalist
-        id="list_i516ok9cio3"
+        id="test_list"
       />
        
       <small
@@ -277,38 +277,46 @@ exports[`Datalist should match snapshot default 1`] = `
 exports[`Datalist should match snapshot props 1`] = `
 <body>
   <div>
-    <select
-      class="_atom_frm__base _atom_frm__select customCss"
-      required=""
+    <div
+      class="customCss"
     >
-      
-      <option
-        value="1"
+       
+      <input
+        class="_atom_frm__base _atom_frm__outline"
+        id="test"
+        list="test_list"
+        required=""
+        type="text"
+      />
+       
+      <datalist
+        id="test_list"
       >
-        Lagden
-      </option>
-      <option
-        value="2"
+        <option
+          value="Lagden"
+        />
+        <option
+          value="Takamoto"
+        />
+        <option
+          value="Tadashi"
+        />
+        <option
+          value="Rita"
+        />
+        <option
+          value="Jorge"
+        />
+        
+      </datalist>
+       
+      <small
+        class="_atom_frm__error___message"
+        title=""
       >
-        Takamoto
-      </option>
-      <option
-        value="3"
-      >
-        Tadashi
-      </option>
-      <option
-        value="4"
-      >
-        Rita
-      </option>
-      <option
-        value="5"
-      >
-        Jorge
-      </option>
-      
-    </select>
+        
+      </small>
+    </div>
   </div>
 </body>
 `;

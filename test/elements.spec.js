@@ -118,17 +118,24 @@ describe('Datalist', () => {
 	afterEach(cleanup)
 
 	test('should match snapshot default', () => {
-		const {container} = render(Datalist)
+		const {container} = render(Datalist, {
+			props: {
+				id: 'test',
+				list: 'test_list',
+			},
+		})
 		expect(container).toMatchSnapshot()
 	})
 
 	test('should match snapshot props', () => {
-		const {container} = render(Select, {
+		const {container} = render(Datalist, {
 			props: {
 				value: 'Rita',
 				options,
 				class: 'customCss',
 				required: true,
+				id: 'test',
+				list: 'test_list',
 			},
 		})
 		expect(container).toMatchSnapshot()
