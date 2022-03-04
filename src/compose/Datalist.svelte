@@ -17,7 +17,7 @@
 	export let showError = true
 	export let label = false
 	export let options = []
-	export let optionkey = 'value'
+	export let optionKey = 'value'
 	export let optionValue = 'text'
 	export let id = `${name}_${uuid()}`
 	export let list = `list_${uuid()}`
@@ -70,7 +70,7 @@
 	/>
 	<datalist id={list}>
 		{#if Array.isArray(options) && options.length > 0}
-			{#each options as item (item[optionkey])}
+			{#each options as item (item[optionKey])}
 				<option value={item[optionValue]} />
 			{/each}
 		{/if}
