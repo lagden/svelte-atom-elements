@@ -3,13 +3,16 @@
 import timekeeper from 'timekeeper'
 import {cleanup, render} from '@testing-library/svelte'
 import {
+	// Base
 	Checkbox,
 	Input,
 	Label,
 	Select,
+	// Compose
 	Check,
 	CheckGroup,
 	Combo,
+	Datalist,
 	Radio,
 	Text,
 } from '../src/elements.js'
@@ -107,6 +110,27 @@ describe('Label', () => {
 
 	test('should match snapshot with slot', () => {
 		const {container} = render(SlotLabel)
+		expect(container).toMatchSnapshot()
+	})
+})
+
+describe('Datalist', () => {
+	afterEach(cleanup)
+
+	test('should match snapshot default', () => {
+		const {container} = render(Datalist)
+		expect(container).toMatchSnapshot()
+	})
+
+	test('should match snapshot props', () => {
+		const {container} = render(Select, {
+			props: {
+				value: 'Rita',
+				options,
+				class: 'customCss',
+				required: true,
+			},
+		})
 		expect(container).toMatchSnapshot()
 	})
 })

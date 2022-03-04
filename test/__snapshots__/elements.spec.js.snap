@@ -245,6 +245,74 @@ exports[`Combo should match snapshot props 1`] = `
 </body>
 `;
 
+exports[`Datalist should match snapshot default 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    >
+       
+      <input
+        class="_atom_frm__base _atom_frm__outline"
+        id="undefined_09mamk6l3nimk"
+        list="list_pfbp48ka05b"
+        type="text"
+      />
+       
+      <datalist
+        id="list_pfbp48ka05b"
+      />
+       
+      <small
+        class="_atom_frm__error___message"
+        title=""
+      >
+        
+      </small>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Datalist should match snapshot props 1`] = `
+<body>
+  <div>
+    <select
+      class="_atom_frm__base _atom_frm__select customCss"
+      required=""
+    >
+      
+      <option
+        value="1"
+      >
+        Lagden
+      </option>
+      <option
+        value="2"
+      >
+        Takamoto
+      </option>
+      <option
+        value="3"
+      >
+        Tadashi
+      </option>
+      <option
+        value="4"
+      >
+        Rita
+      </option>
+      <option
+        value="5"
+      >
+        Jorge
+      </option>
+      
+    </select>
+  </div>
+</body>
+`;
+
 exports[`Input invalid type 1`] = `
 <body>
   <div>

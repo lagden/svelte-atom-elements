@@ -7,6 +7,7 @@ import Select from './base/Select.svelte'
 import Check from './compose/Check.svelte'
 import CheckGroup from './compose/CheckGroup.svelte'
 import Combo from './compose/Combo.svelte'
+import Datalist from './compose/Datalist.svelte'
 import Radio from './compose/Radio.svelte'
 import Text from './compose/Text.svelte'
 
@@ -20,6 +21,7 @@ export {
 	Check,
 	CheckGroup,
 	Combo,
+	Datalist,
 	Radio,
 	Text,
 }
