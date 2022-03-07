@@ -3,6 +3,7 @@
 	export let disabled = false
 	export let required = false
 	export let toggleMode = false
+	export let boldMode = false
 
 	// CSS
 	let className = ''
@@ -14,5 +15,6 @@
 	class:_atom_frm__label___disabled={disabled}
 	class:_atom_frm__label___required={required}
 	class:_atom_frm__label___toggle={toggleMode}
+	class:_atom_frm__label___bold={boldMode}
 	{...$$restProps}
 ><slot /></label>

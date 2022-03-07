@@ -9,6 +9,7 @@ import CheckGroup from './compose/CheckGroup.svelte'
 import Combo from './compose/Combo.svelte'
 import Datalist from './compose/Datalist.svelte'
 import Radio from './compose/Radio.svelte'
+import Read from './compose/Read.svelte'
 import Text from './compose/Text.svelte'
 
 export {
@@ -23,5 +24,6 @@ export {
 	Combo,
 	Datalist,
 	Radio,
+	Read,
 	Text,
 }

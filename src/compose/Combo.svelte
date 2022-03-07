@@ -1,5 +1,6 @@
 <script>
 	import {onMount, tick} from 'svelte'
+	import {uuid} from '../helper.js'
 
 	import Label from '../base/Label.svelte'
 	import Select from '../base/Select.svelte'
@@ -8,9 +9,11 @@
 	export let value = ''
 	export let outline = true
 	export let showError = true
+	export let showHelper = true
+	export let helper = ''
 	export let label = false
 	export let options = []
-	export let id = `${name}_${Number(Math.random()).toString(26).slice(2)}`
+	export let id = `${name}_${uuid()}`
 
 	let className = ''
 	export {className as class}
@@ -43,6 +46,7 @@
 			{...(id ? {for: id} : {})}
 			disabled={$$restProps.disabled}
 			required={$$restProps.required}
+			boldMode={$$restProps?.boldMode ?? false}
 		>{@html label}</Label>
 	{/if}
 	<Select
@@ -59,5 +63,8 @@
 	/>
 	{#if showError}
 		<small class="_atom_frm__error___message" title={validationMessage}>{validationMessage}</small>
+	{/if}
+	{#if showHelper}
+		<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
 	{/if}
 </div>

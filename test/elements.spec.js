@@ -2,6 +2,7 @@
 
 import timekeeper from 'timekeeper'
 import {cleanup, render} from '@testing-library/svelte'
+import {uuid} from '../src/helper.js'
 import {
 	// Base
 	Checkbox,
@@ -14,6 +15,7 @@ import {
 	Combo,
 	Datalist,
 	Radio,
+	Read,
 	Text,
 } from '../src/elements.js'
 
@@ -41,6 +43,7 @@ describe('Checkbox', () => {
 
 	test('should match snapshot default', () => {
 		const {container} = render(Checkbox)
+		uuid()
 		expect(container).toMatchSnapshot()
 	})
 
@@ -110,34 +113,6 @@ describe('Label', () => {
 
 	test('should match snapshot with slot', () => {
 		const {container} = render(SlotLabel)
-		expect(container).toMatchSnapshot()
-	})
-})
-
-describe('Datalist', () => {
-	afterEach(cleanup)
-
-	test('should match snapshot default', () => {
-		const {container} = render(Datalist, {
-			props: {
-				id: 'test',
-				list: 'test_list',
-			},
-		})
-		expect(container).toMatchSnapshot()
-	})
-
-	test('should match snapshot props', () => {
-		const {container} = render(Datalist, {
-			props: {
-				value: 'Rita',
-				options,
-				class: 'customCss',
-				required: true,
-				id: 'test',
-				list: 'test_list',
-			},
-		})
 		expect(container).toMatchSnapshot()
 	})
 })
@@ -258,6 +233,37 @@ describe('Combo', () => {
 	})
 })
 
+describe('Datalist', () => {
+	afterEach(cleanup)
+
+	test('should match snapshot default', () => {
+		const {container} = render(Datalist, {
+			props: {
+				name: 'test',
+				id: 'test',
+				list: 'test_list',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+
+	test('should match snapshot props', () => {
+		const {container} = render(Datalist, {
+			props: {
+				name: 'test',
+				value: 'Rita',
+				options,
+				class: 'customCss',
+				required: true,
+				id: 'test',
+				list: 'test_list',
+				label: '<b>Test</b>',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+})
+
 describe('Radio', () => {
 	afterEach(cleanup)
 
@@ -289,6 +295,34 @@ describe('Radio', () => {
 	})
 })
 
+describe('Read', () => {
+	afterEach(cleanup)
+
+	test('should match snapshot default', () => {
+		const {container} = render(Read, {
+			props: {
+				value: 1,
+				outline: false,
+				wipe: true,
+				showHelper: false,
+				id: 'test',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+
+	test('should match snapshot props', () => {
+		const {container} = render(Read, {
+			props: {
+				name: 'test',
+				class: 'customCss',
+				label: '<b>Test</b>',
+				id: 'test',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+})
 
 describe('Text', () => {
 	afterEach(cleanup)
