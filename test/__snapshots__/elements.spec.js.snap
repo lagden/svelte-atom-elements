@@ -20,17 +20,21 @@ exports[`Check should match snapshot default 1`] = `
         
       </label>
        
-      <small
-        class="_atom_frm__error___message"
-        title=""
+      <div
+        class="_atom_frm__message"
       >
-        
-      </small>
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+        <small
+          class="_atom_frm__error___message"
+          title=""
+        >
+          
+        </small>
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -67,11 +71,15 @@ exports[`Check should match snapshot props 1`] = `
         
       </label>
        
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+      <div
+        class="_atom_frm__message"
+      >
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -89,10 +97,14 @@ exports[`CheckGroup should match snapshot default 1`] = `
         class="_atom_frm__group"
       />
        
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+      <div
+        class="_atom_frm__message"
+      >
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -177,10 +189,14 @@ exports[`CheckGroup should match snapshot props 1`] = `
         </label>
       </div>
        
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+      <div
+        class="_atom_frm__message"
+      >
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -224,11 +240,15 @@ exports[`Combo should match snapshot default 1`] = `
         
       </select>
        
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+      <div
+        class="_atom_frm__message"
+      >
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -259,17 +279,21 @@ exports[`Combo should match snapshot props 1`] = `
         
       </select>
        
-      <small
-        class="_atom_frm__error___message"
-        title=""
+      <div
+        class="_atom_frm__message"
       >
-        
-      </small>
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+        <small
+          class="_atom_frm__error___message"
+          title=""
+        >
+          
+        </small>
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -294,17 +318,21 @@ exports[`Datalist should match snapshot default 1`] = `
         id="test_list"
       />
        
-      <small
-        class="_atom_frm__error___message"
-        title=""
+      <div
+        class="_atom_frm__message"
       >
-        
-      </small>
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+        <small
+          class="_atom_frm__error___message"
+          title=""
+        >
+          
+        </small>
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -356,17 +384,21 @@ exports[`Datalist should match snapshot props 1`] = `
         
       </datalist>
        
-      <small
-        class="_atom_frm__error___message"
-        title=""
+      <div
+        class="_atom_frm__message"
       >
-        
-      </small>
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+        <small
+          class="_atom_frm__error___message"
+          title=""
+        >
+          
+        </small>
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -456,11 +488,15 @@ exports[`Radio should match snapshot default 1`] = `
         class="_atom_frm__group"
       />
        
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+      <div
+        class="_atom_frm__message"
+      >
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -582,17 +618,21 @@ exports[`Radio should match snapshot props 1`] = `
         </label>
       </div>
        
-      <small
-        class="_atom_frm__error___message"
-        title=""
+      <div
+        class="_atom_frm__message"
       >
-        
-      </small>
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+        <small
+          class="_atom_frm__error___message"
+          title=""
+        >
+          
+        </small>
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -641,10 +681,14 @@ exports[`Read should match snapshot props 1`] = `
         
       </div>
        
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+      <div
+        class="_atom_frm__message"
+      >
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -720,11 +764,15 @@ exports[`Text should match snapshot default 1`] = `
         type="text"
       />
        
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+      <div
+        class="_atom_frm__message"
+      >
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>
@@ -754,17 +802,21 @@ exports[`Text should match snapshot props 1`] = `
         type="tel"
       />
        
-      <small
-        class="_atom_frm__error___message"
-        title=""
+      <div
+        class="_atom_frm__message"
       >
-        
-      </small>
-       
-      <small
-        class="_atom_frm__helper___message"
-        title=""
-      />
+        <small
+          class="_atom_frm__error___message"
+          title=""
+        >
+          
+        </small>
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
     </div>
   </div>
 </body>

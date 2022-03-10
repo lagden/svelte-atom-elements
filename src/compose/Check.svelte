@@ -8,6 +8,7 @@
 	export let name
 	export let checked = undefined
 	export let showError = true
+	export let showMessage = true
 	export let showHelper = true
 	export let helper = ''
 	export let label = undefined
@@ -64,10 +65,14 @@
 			<span aria-label="{labelCheck}">{labelCheck}</span>
 		{/if}
 	</Label>
-	{#if showError}
-		<small class="_atom_frm__error___message" title={validationMessage}>{validationMessage}</small>
-	{/if}
-	{#if showHelper}
-		<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
+	{#if showMessage && (showError || showHelper)}
+		<div class="_atom_frm__message">
+			{#if showError}
+				<small class="_atom_frm__error___message" title={validationMessage}>{validationMessage}</small>
+			{/if}
+			{#if showHelper}
+				<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
+			{/if}
+		</div>
 	{/if}
 </div>

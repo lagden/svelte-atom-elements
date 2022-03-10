@@ -7,6 +7,7 @@
 	export let options = []
 	export let switchMode = false
 	export let outline = false
+	export let showMessage = true
 	export let showHelper = true
 	export let helper = ''
 	export let label = undefined
@@ -50,7 +51,11 @@
 			</Label>
 		{/each}
 	</div>
-	{#if showHelper}
-		<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
+	{#if showMessage && showHelper}
+		<div class="_atom_frm__message">
+			{#if showHelper}
+				<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
+			{/if}
+		</div>
 	{/if}
 </div>

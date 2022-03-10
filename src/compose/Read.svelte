@@ -5,6 +5,7 @@
 	export let value = ''
 	export let outline = true
 	export let wipe = false
+	export let showMessage = true
 	export let showHelper = true
 	export let helper = ''
 	export let label = false
@@ -37,7 +38,11 @@
 		{...(id ? {id} : {})}
 		{...$$restProps}
 	>{value}</div>
-	{#if showHelper}
-		<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
+	{#if showMessage && showHelper}
+		<div class="_atom_frm__message">
+			{#if showHelper}
+				<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
+			{/if}
+		</div>
 	{/if}
 </div>
