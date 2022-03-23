@@ -1,3 +1,5 @@
+<svelte:options tag="tadashi-atom-elements-label" accessors={true} />
+
 <script>
 	// Props
 	export let disabled = false

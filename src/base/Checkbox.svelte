@@ -1,4 +1,4 @@
-<svelte:options accessors />
+<svelte:options tag="tadashi-atom-elements-checkbox" accessors={true} />
 
 <script>
 	// Props
