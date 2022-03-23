@@ -87,8 +87,8 @@ module.exports = {
 	settings: {
 		'svelte3/ignore-warnings': w => ignoreWarnings.has(w && w.code),
 		'svelte3/ignore-styles': attributes => attributes.postcss || attributes.lang,
-		'svelte3/compiler-options': {
-			customElement: true,
-		},
+		// 'svelte3/compiler-options': {
+		// 	customElement: true,
+		// },
 	},
 }

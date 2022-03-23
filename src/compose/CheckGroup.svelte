@@ -1,5 +1,3 @@
-<svelte:options tag="tadashi-atom-elements-compose-check-group" accessors={true} />
-
 <script>
 	import {uuid} from '../helper.js'
 	import Label from '../base/Label.svelte'

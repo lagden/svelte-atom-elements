@@ -1,5 +1,3 @@
-<svelte:options tag="tadashi-atom-elements-compose-check" accessors={true} />
-
 <script>
 	import {onMount, tick} from 'svelte'
 	import {uuid} from '../helper.js'

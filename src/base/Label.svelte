@@ -1,4 +1,4 @@
-<svelte:options tag="tadashi-atom-elements-label" accessors={true} />
+<svelte:options accessors={true} />
 
 <script>
 	// Props

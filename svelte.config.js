@@ -8,7 +8,7 @@ const ignoreWarnings = new Set([
 const config = {
 	compilerOptions: {
 		css: true,
-		customElement: true,
+		// customElement: true,
 	},
 	filterWarnings(warning) {
 		// console.log('------------------>>>', JSON.stringify(warning, undefined, '  '))
