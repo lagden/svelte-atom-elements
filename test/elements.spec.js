@@ -16,6 +16,7 @@ import {
 	Datalist,
 	Radio,
 	Read,
+	Request,
 	Text,
 } from '../src/elements.js'
 
@@ -323,6 +324,38 @@ describe('Read', () => {
 		expect(container).toMatchSnapshot()
 	})
 })
+
+describe('Request', () => {
+	afterEach(cleanup)
+
+	test('should match snapshot default', () => {
+		const {container} = render(Request, {
+			props: {
+				name: 'test',
+				value: 1,
+				outline: false,
+				showError: false,
+				id: 'test',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+
+	test('should match snapshot props', () => {
+		const {container} = render(Request, {
+			props: {
+				name: 'test',
+				class: 'customCss',
+				label: '<b>Test</b>',
+				type: 'tel',
+				required: true,
+				id: 'test',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+})
+
 
 describe('Text', () => {
 	afterEach(cleanup)

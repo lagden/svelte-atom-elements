@@ -10,6 +10,7 @@ import Combo from './compose/Combo.svelte'
 import Datalist from './compose/Datalist.svelte'
 import Radio from './compose/Radio.svelte'
 import Read from './compose/Read.svelte'
+import Request from './compose/Request.svelte'
 import Text from './compose/Text.svelte'
 
 export {
@@ -25,5 +26,6 @@ export {
 	Datalist,
 	Radio,
 	Read,
+	Request,
 	Text,
 }

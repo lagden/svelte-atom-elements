@@ -694,6 +694,98 @@ exports[`Read should match snapshot props 1`] = `
 </body>
 `;
 
+exports[`Request should match snapshot default 1`] = `
+<body>
+  <div>
+    <div
+      class=""
+    >
+       
+      <div
+        class="_atom_frm__request"
+      >
+        <div
+          class="_atom_frm__request_target"
+        >
+          <input
+            class="_atom_frm__base _atom_frm__standard"
+            id="test"
+            name="test"
+            type="text"
+          />
+           
+        </div>
+         
+      </div>
+       
+      <div
+        class="_atom_frm__message"
+      >
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Request should match snapshot props 1`] = `
+<body>
+  <div>
+    <div
+      class="customCss"
+    >
+      <label
+        class="_atom_frm__label _atom_frm__label___required"
+        for="test"
+      >
+        <b>
+          Test
+        </b>
+        
+      </label>
+       
+      <div
+        class="_atom_frm__request"
+      >
+        <div
+          class="_atom_frm__request_target"
+        >
+          <input
+            class="_atom_frm__base _atom_frm__outline"
+            id="test"
+            name="test"
+            required=""
+            type="tel"
+          />
+           
+        </div>
+         
+      </div>
+       
+      <div
+        class="_atom_frm__message"
+      >
+        <small
+          class="_atom_frm__error___message"
+          title=""
+        >
+          
+        </small>
+         
+        <small
+          class="_atom_frm__helper___message"
+          title=""
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
 exports[`Select should match snapshot default 1`] = `
 <body>
   <div>
