@@ -1,3 +1,5 @@
+<svelte:options accessors={true} />
+
 <script>
 	import {onMount, tick} from 'svelte'
 	import {uuid} from '../helper.js'

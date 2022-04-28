@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-atom-elements",
-  "version": "1.10.0",
+  "version": "1.10.1",
   "repository": "github:lagden/svelte-atom-elements",
   "description": "Svelte components",
   "keywords": [

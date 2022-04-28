@@ -1,3 +1,5 @@
+<svelte:options accessors={true} />
+
 <script>
 	import {uuid} from '../helper.js'
 	import Label from '../base/Label.svelte'
