@@ -4,7 +4,6 @@
 
 	import Label from '../base/Label.svelte'
 
-	export let name
 	export let group = undefined
 	export let options = []
 	export let outline = false
@@ -14,7 +13,7 @@
 	export let helper = ''
 	export let toggleMode = false
 	export let label = undefined
-	export let id = `${name}_${uuid()}`
+	export let id = `_${uuid()}`
 
 	let className = ''
 	export {className as class}
@@ -72,7 +71,6 @@
 					on:focus
 					on:click
 					on:change
-					{name}
 					{value}
 					{...$$restProps}
 				>

@@ -5,7 +5,6 @@
 	import Label from '../base/Label.svelte'
 	import Input from '../base/Input.svelte'
 
-	export let name
 	export let value = ''
 	export let outline = true
 	export let showError = true
@@ -16,7 +15,7 @@
 	export let options = []
 	export let optionKey = 'value'
 	export let optionValue = 'text'
-	export let id = `${name}_${uuid()}`
+	export let id = `_${uuid()}`
 	export let list = `list_${uuid()}`
 
 	let className = ''
@@ -61,7 +60,6 @@
 		on:focus
 		on:change
 		on:input
-		{name}
 		{list}
 		{...(id ? {id} : {})}
 		{...$$restProps}

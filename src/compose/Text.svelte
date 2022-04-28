@@ -5,7 +5,6 @@
 	import Label from '../base/Label.svelte'
 	import Input from '../base/Input.svelte'
 
-	export let name
 	export let value = ''
 	export let outline = true
 	export let showError = true
@@ -13,7 +12,7 @@
 	export let showHelper = true
 	export let helper = ''
 	export let label = false
-	export let id = `${name}_${uuid()}`
+	export let id = `_${uuid()}`
 
 	let className = ''
 	export {className as class}
@@ -58,7 +57,6 @@
 		on:focus
 		on:click
 		on:change
-		{name}
 		{...(id ? {id} : {})}
 		{...$$restProps}
 	/>

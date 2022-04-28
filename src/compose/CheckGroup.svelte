@@ -2,7 +2,6 @@
 	import {uuid} from '../helper.js'
 	import Label from '../base/Label.svelte'
 
-	export let name
 	export let group = []
 	export let options = []
 	export let switchMode = false
@@ -11,7 +10,7 @@
 	export let showHelper = true
 	export let helper = ''
 	export let label = undefined
-	export let id = `${name}_${uuid()}`
+	export let id = `_${uuid()}`
 
 	let className = ''
 	export {className as class}
@@ -43,7 +42,6 @@
 					on:focus
 					on:click
 					on:change
-					{name}
 					{value}
 					{...$$restProps}
 				>

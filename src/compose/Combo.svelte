@@ -5,7 +5,6 @@
 	import Label from '../base/Label.svelte'
 	import Select from '../base/Select.svelte'
 
-	export let name
 	export let value = ''
 	export let outline = true
 	export let showError = true
@@ -14,7 +13,7 @@
 	export let helper = ''
 	export let label = false
 	export let options = []
-	export let id = `${name}_${uuid()}`
+	export let id = `_${uuid()}`
 
 	let className = ''
 	export {className as class}
@@ -57,7 +56,6 @@
 		on:blur
 		on:focus
 		on:change
-		{name}
 		{options}
 		{...(id ? {id} : {})}
 		{...$$restProps}

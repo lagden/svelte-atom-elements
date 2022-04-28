@@ -5,7 +5,6 @@
 	import Label from '../base/Label.svelte'
 	import Checkbox from '../base/Checkbox.svelte'
 
-	export let name
 	export let checked = undefined
 	export let showError = true
 	export let showMessage = true
@@ -13,7 +12,7 @@
 	export let helper = ''
 	export let label = undefined
 	export let labelCheck = undefined
-	export let id = `${name}_${uuid()}`
+	export let id = `_${uuid()}`
 
 	let className = ''
 	export {className as class}
@@ -58,7 +57,6 @@
 			on:focus
 			on:click
 			on:change
-			{name}
 			{...$$restProps}
 		/>
 		{#if labelCheck}
