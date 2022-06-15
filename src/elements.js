@@ -1,31 +1,14 @@
 /* istanbul ignore file */
-import Checkbox from './base/Checkbox.svelte'
-import Input from './base/Input.svelte'
-import Label from './base/Label.svelte'
-import Select from './base/Select.svelte'
+export {default as Checkbox} from './base/Checkbox.svelte'
+export {default as Input} from './base/Input.svelte'
+export {default as Label} from './base/Label.svelte'
+export {default as Select} from './base/Select.svelte'
 
-import Check from './compose/Check.svelte'
-import CheckGroup from './compose/CheckGroup.svelte'
-import Combo from './compose/Combo.svelte'
-import Datalist from './compose/Datalist.svelte'
-import Radio from './compose/Radio.svelte'
-import Read from './compose/Read.svelte'
-import Request from './compose/Request.svelte'
-import Text from './compose/Text.svelte'
-
-export {
-	// Base
-	Checkbox,
-	Input,
-	Label,
-	Select,
-	// Compose
-	Check,
-	CheckGroup,
-	Combo,
-	Datalist,
-	Radio,
-	Read,
-	Request,
-	Text,
-}
+export {default as Check} from './compose/Check.svelte'
+export {default as CheckGroup} from './compose/CheckGroup.svelte'
+export {default as Combo} from './compose/Combo.svelte'
+export {default as Datalist} from './compose/Datalist.svelte'
+export {default as Radio} from './compose/Radio.svelte'
+export {default as Read} from './compose/Read.svelte'
+export {default as Request} from './compose/Request.svelte'
+export {default as Text} from './compose/Text.svelte'

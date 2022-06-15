@@ -2,10 +2,11 @@
 
 <script>
 	import {onMount, tick} from 'svelte'
-	import {uuid} from '../helper.js'
+	import {uuid} from '@tadashi/common'
 
 	import Label from '../base/Label.svelte'
 	import Input from '../base/Input.svelte'
+	import Message from '../helper/Message.svelte'
 
 	export let value = ''
 	export let outline = true
@@ -67,14 +68,11 @@
 		</div>
 		<slot name="trigger" />
 	</div>
-	{#if showMessage && (showError || showHelper)}
-		<div class="_atom_frm__message">
-			{#if showError}
-				<small class="_atom_frm__error___message" title={validationMessage}>{validationMessage}</small>
-			{/if}
-			{#if showHelper}
-				<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
-			{/if}
-		</div>
-	{/if}
+	<Message
+		{showMessage}
+		{showError}
+		{showHelper}
+		{validationMessage}
+		{helper}
+	><slot name="helper">{@html helper}</slot></Message>
 </div>

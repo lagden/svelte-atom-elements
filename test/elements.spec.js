@@ -2,7 +2,6 @@
 
 import timekeeper from 'timekeeper'
 import {cleanup, render} from '@testing-library/svelte'
-import {uuid} from '../src/helper.js'
 import {
 	// Base
 	Checkbox,
@@ -44,7 +43,6 @@ describe('Checkbox', () => {
 
 	test('should match snapshot default', () => {
 		const {container} = render(Checkbox)
-		uuid()
 		expect(container).toMatchSnapshot()
 	})
 

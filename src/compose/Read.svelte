@@ -1,8 +1,10 @@
 <svelte:options accessors={true} />
 
 <script>
+	import {uuid} from '@tadashi/common'
+
 	import Label from '../base/Label.svelte'
-	import {uuid} from '../helper.js'
+	import Message from '../helper/Message.svelte'
 
 	export let value = ''
 	export let outline = true
@@ -18,6 +20,9 @@
 
 	// Bind HTML Element
 	export let node = undefined
+
+	const validationMessage = ''
+	const showError = false
 
 	// Estilo do formulário
 	let css = outline ? '_atom_frm__outline' : '_atom_frm__standard'
@@ -40,11 +45,11 @@
 		{...(id ? {id} : {})}
 		{...$$restProps}
 	>{value}</div>
-	{#if showMessage && showHelper}
-		<div class="_atom_frm__message">
-			{#if showHelper}
-				<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
-			{/if}
-		</div>
-	{/if}
+	<Message
+		{showMessage}
+		{showError}
+		{showHelper}
+		{validationMessage}
+		{helper}
+	><slot name="helper">{@html helper}</slot></Message>
 </div>

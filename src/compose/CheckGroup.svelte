@@ -1,8 +1,10 @@
 <svelte:options accessors={true} />
 
 <script>
-	import {uuid} from '../helper.js'
+	import {uuid} from '@tadashi/common'
+
 	import Label from '../base/Label.svelte'
+	import Message from '../helper/Message.svelte'
 
 	export let group = []
 	export let options = []
@@ -16,6 +18,9 @@
 
 	let className = ''
 	export {className as class}
+
+	const validationMessage = ''
+	const showError = false
 </script>
 
 <div class="{className}">
@@ -51,11 +56,11 @@
 			</Label>
 		{/each}
 	</div>
-	{#if showMessage && showHelper}
-		<div class="_atom_frm__message">
-			{#if showHelper}
-				<small class="_atom_frm__helper___message" title={helper}>{@html helper}</small>
-			{/if}
-		</div>
-	{/if}
+	<Message
+		{showMessage}
+		{showError}
+		{showHelper}
+		{validationMessage}
+		{helper}
+	><slot name="helper">{@html helper}</slot></Message>
 </div>

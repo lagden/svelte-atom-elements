@@ -13,9 +13,10 @@ try {
 		sourcemap: true,
 		minify: false,
 		splitting: false,
+		platform: 'browser',
 		format: 'esm',
 		outdir: './dist',
-		target: ['es2021'],
+		target: ['es2022'],
 		plugins: [
 			esbuildSvelte(config),
 		],
