@@ -51,5 +51,5 @@
 		{showHelper}
 		{validationMessage}
 		{helper}
-	><slot name="helper">{@html helper}</slot></Message>
+	><slot name="helper">{helper}</slot></Message>
 </div>

@@ -23,19 +23,19 @@ exports[`Check should match snapshot default 1`] = `
       <div
         class="_atom_frm__message"
       >
-        <small
+        <div
           class="_atom_frm__error___message"
           title=""
         >
           
-        </small>
+        </div>
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -78,12 +78,12 @@ exports[`Check should match snapshot props 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -107,12 +107,12 @@ exports[`CheckGroup should match snapshot default 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -203,12 +203,12 @@ exports[`CheckGroup should match snapshot props 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -258,12 +258,12 @@ exports[`Combo should match snapshot default 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -299,19 +299,19 @@ exports[`Combo should match snapshot props 1`] = `
       <div
         class="_atom_frm__message"
       >
-        <small
+        <div
           class="_atom_frm__error___message"
           title=""
         >
           
-        </small>
+        </div>
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -341,19 +341,19 @@ exports[`Datalist should match snapshot default 1`] = `
       <div
         class="_atom_frm__message"
       >
-        <small
+        <div
           class="_atom_frm__error___message"
           title=""
         >
           
-        </small>
+        </div>
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -410,19 +410,19 @@ exports[`Datalist should match snapshot props 1`] = `
       <div
         class="_atom_frm__message"
       >
-        <small
+        <div
           class="_atom_frm__error___message"
           title=""
         >
           
-        </small>
+        </div>
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -518,12 +518,12 @@ exports[`Radio should match snapshot default 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -650,19 +650,19 @@ exports[`Radio should match snapshot props 1`] = `
       <div
         class="_atom_frm__message"
       >
-        <small
+        <div
           class="_atom_frm__error___message"
           title=""
         >
           
-        </small>
+        </div>
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -718,12 +718,12 @@ exports[`Read should match snapshot props 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -759,12 +759,12 @@ exports[`Request should match snapshot default 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -809,19 +809,19 @@ exports[`Request should match snapshot props 1`] = `
       <div
         class="_atom_frm__message"
       >
-        <small
+        <div
           class="_atom_frm__error___message"
           title=""
         >
           
-        </small>
+        </div>
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -903,12 +903,12 @@ exports[`Text should match snapshot default 1`] = `
         class="_atom_frm__message"
       >
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>
@@ -943,19 +943,19 @@ exports[`Text should match snapshot props 1`] = `
       <div
         class="_atom_frm__message"
       >
-        <small
+        <div
           class="_atom_frm__error___message"
           title=""
         >
           
-        </small>
+        </div>
          
-        <small
+        <div
           class="_atom_frm__helper___message"
           title=""
         >
           
-        </small>
+        </div>
       </div>
       
     </div>

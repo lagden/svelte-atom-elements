@@ -9,12 +9,12 @@
 {#if showMessage && (showError || showHelper)}
 	<div class="_atom_frm__message">
 		{#if showError}
-			<small class="_atom_frm__error___message" title={validationMessage}>{validationMessage}</small>
+			<div class="_atom_frm__error___message" title={validationMessage}>{validationMessage}</div>
 		{/if}
 		{#if showHelper}
-			<small class="_atom_frm__helper___message" title={helper}>
+			<div class="_atom_frm__helper___message" title={helper}>
 				<slot />
-			</small>
+			</div>
 		{/if}
 	</div>
 {/if}
