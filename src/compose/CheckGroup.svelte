@@ -1,6 +1,7 @@
 <svelte:options accessors={true} />
 
 <script>
+	import {afterUpdate, createEventDispatcher} from 'svelte'
 	import {uuid} from '@tadashi/common'
 
 	import Label from '../base/Label.svelte'
@@ -10,17 +11,47 @@
 	export let options = []
 	export let switchMode = false
 	export let outline = false
-	export let showMessage = true
-	export let showHelper = true
+	export let validate = false
+	export let showError = true
+	export let showHelper = false
 	export let helper = ''
-	export let label = undefined
+	export let css = ''
+	export let label = false
 	export let id = `_${uuid()}`
 
 	let className = ''
 	export {className as class}
 
-	const validationMessage = ''
-	const showError = false
+	export let name
+	name = `${name}[]`
+
+	let wrapper
+	let validationMessage = ''
+
+	function customValidate() {
+		if (!wrapper) {
+			return
+		}
+
+		const nodes = wrapper.querySelectorAll('input[type=checkbox]')
+		const invalid = [...nodes].every(node => node.checked === false)
+		const msg = invalid ? 'Selecione pelo menos uma opção.' : ''
+		nodes?.item(0)?.setCustomValidity(msg)
+		validationMessage = msg
+	}
+
+	const dispatch = createEventDispatcher()
+
+	afterUpdate(() => {
+		if (validate) {
+			customValidate()
+
+			const valid = node.checkValidity()
+			if (valid) {
+				dispatch('valid')
+			}
+		}
+	})
 </script>
 
 <div class="{className}">
@@ -34,33 +65,37 @@
 		>{@html label}</span>
 	{/if}
 	<div
+		bind:this={wrapper}
 		aria-labelledby="{id}_label"
-		class="_atom_frm__group"
+		class="_atom_frm__group {css}"
 	>
-		{#each options as {value, text, props = {}} (`${value}_${text}`)}
-			<Label class="_atom_frm__label___checkbox">
-				<input
-					type="checkbox"
-					class="_atom_frm__checkbox"
-					class:_atom_frm__checkbox___switch={switchMode}
-					class:_atom_frm__checkbox___outline={outline}
-					bind:group
-					on:blur
-					on:focus
-					on:click
-					on:change
-					{value}
-					{...$$restProps}
-				>
-				<span aria-label="{text}">{text}</span>
-			</Label>
+		{#each options as {value, text, props = {}}, idx (`_${value}_${text}`)}
+			<slot name="loop" data={{value, text, props, idx}} >
+				<Label class="_atom_frm__label___checkbox" for={`_${value}_${text}`}>
+					<input
+						type="checkbox"
+						class="_atom_frm__checkbox"
+						class:_atom_frm__checkbox___switch={switchMode}
+						class:_atom_frm__checkbox___outline={outline}
+						id={`_${value}_${text}`}
+						bind:group
+						on:blur
+						on:focus
+						on:click
+						on:change
+						on:invalid
+						{value}
+						{name}
+						{...$$restProps}
+					>
+					<span aria-label="{text}">{text}</span>
+				</Label>
+			</slot>
 		{/each}
 	</div>
 	<Message
-		{showMessage}
-		{showError}
 		{showHelper}
+		{showError}
 		{validationMessage}
-		{helper}
 	><slot name="helper">{helper}</slot></Message>
 </div>

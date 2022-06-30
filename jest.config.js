@@ -2,11 +2,11 @@ export default {
 	extensionsToTreatAsEsm: ['.svelte'],
 	moduleFileExtensions: ['js', 'svelte'],
 	transform: {
-		// '^.+\\.js$': 'babel-jest',
-		'\\.[jt]sx?$': 'babel-jest',
+		'^.+\\.js$': 'babel-jest',
 		'^.+\\.svelte$': ['svelte-jester', {preprocess: false}],
 	},
-	testEnvironment: 'jest-environment-jsdom',
+	testEnvironment: 'jsdom',
+	moduleNameMapper: {},
 	bail: false,
 	verbose: true,
 }

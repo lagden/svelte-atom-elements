@@ -1,7 +1,6 @@
 <svelte:options accessors={true} />
 
 <script>
-	import {onMount, tick} from 'svelte'
 	import {uuid} from '@tadashi/common'
 
 	import Label from '../base/Label.svelte'
@@ -10,12 +9,13 @@
 	export let group = undefined
 	export let options = []
 	export let outline = false
-	export let showError = true
-	export let showMessage = true
-	export let showHelper = true
-	export let helper = ''
+	export let custom = false
 	export let toggleMode = false
-	export let label = undefined
+	export let showError = true
+	export let showHelper = false
+	export let helper = ''
+	export let css = ''
+	export let label = false
 	export let id = `_${uuid()}`
 
 	let className = ''
@@ -23,27 +23,14 @@
 
 	// Validação via API do navegador
 	let validationMessage = ''
-	let radios
 
-	async function updateValidationMessage() {
-		await tick()
-		const radio = radios?.item(0)
-		validationMessage = radio?.validationMessage ?? ''
+	function onInvalid(event) {
+		validationMessage = this?.validationMessage ?? ''
 	}
 
-	$: options, group, updateValidationMessage()
-
-	onMount(() => {
-		radios = document.getElementsByName(name)
-		for (const radio of radios) {
-			radio.addEventListener('validationMessage', updateValidationMessage)
-		}
-		return () => {
-			for (const radio of radios) {
-				radio.removeEventListener('validationMessage', updateValidationMessage)
-			}
-		}
-	})
+	function onValid() {
+		validationMessage = ''
+	}
 </script>
 
 <div class="{className}">
@@ -58,34 +45,38 @@
 	{/if}
 	<div
 		aria-labelledby="{id}_label"
-		class="_atom_frm__group"
+		class="_atom_frm__group {css}"
 		class:_atom_frm__group___toggle={toggleMode}
 		class:_atom_frm__radio___outline={outline}
+		class:_atom_frm__radio___custom={custom}
 	>
-		{#each options as {value, text, props = {}} (`${value}_${text}`)}
-			<Label class="_atom_frm__label___radio" {toggleMode}>
-				<input
-					type="radio"
-					class="_atom_frm__radio"
-					class:_atom_frm__radio___toggle={toggleMode}
-					class:_atom_frm__radio___outline={outline}
-					bind:group={group}
-					on:blur
-					on:focus
-					on:click
-					on:change
-					{value}
-					{...$$restProps}
-				>
-				<span aria-label="{text}">{text}</span>
-			</Label>
+		{#each options as {value, text, props = {}}, idx (`_${value}_${text}`)}
+			<slot name="loop" data={{value, text, props, idx}} >
+				<Label class="_atom_frm__label___radio"  for={`_${value}_${text}`} {toggleMode}>
+					<input
+						type="radio"
+						class="_atom_frm__radio"
+						class:_atom_frm__radio___toggle={toggleMode}
+						class:_atom_frm__radio___outline={outline}
+						class:_atom_frm__radio___custom={custom}
+						bind:group
+						on:blur
+						on:focus
+						on:click
+						on:change
+						on:invalid={onInvalid}
+						on:valid={onValid}
+						{value}
+						{...$$restProps}
+					>
+					<span aria-label="{text}">{text}</span>
+				</Label>
+			</slot>
 		{/each}
 	</div>
 	<Message
-		{showMessage}
-		{showError}
 		{showHelper}
+		{showError}
 		{validationMessage}
-		{helper}
 	><slot name="helper">{helper}</slot></Message>
 </div>

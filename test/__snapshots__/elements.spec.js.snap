@@ -10,6 +10,7 @@ exports[`Check should match snapshot default 1`] = `
       <label
         aria-labelledby="test_label"
         class="_atom_frm__label _atom_frm__label___checkbox"
+        for="_f9c9c31758ea5e470"
       >
         <input
           class="_atom_frm__checkbox"
@@ -30,12 +31,6 @@ exports[`Check should match snapshot default 1`] = `
           
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
       </div>
       
     </div>
@@ -59,6 +54,7 @@ exports[`Check should match snapshot props 1`] = `
       <label
         aria-labelledby="test_label"
         class="_atom_frm__label _atom_frm__label___checkbox"
+        for="_4831c11758ea5e470"
       >
         <input
           class="_atom_frm__checkbox"
@@ -74,17 +70,6 @@ exports[`Check should match snapshot props 1`] = `
         
       </label>
        
-      <div
-        class="_atom_frm__message"
-      >
-         
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
-      </div>
       
     </div>
   </div>
@@ -100,19 +85,19 @@ exports[`CheckGroup should match snapshot default 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class="_atom_frm__group"
+        class="_atom_frm__group "
       />
        
       <div
         class="_atom_frm__message"
       >
-         
         <div
-          class="_atom_frm__helper___message"
+          class="_atom_frm__error___message"
           title=""
         >
           
         </div>
+         
       </div>
       
     </div>
@@ -135,17 +120,18 @@ exports[`CheckGroup should match snapshot props 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class="_atom_frm__group"
+        class="_atom_frm__group "
       >
         
         <label
           class="_atom_frm__label _atom_frm__label___checkbox"
+          for="_a_a"
         >
           <input
             class="_atom_frm__checkbox"
-            name="test"
+            id="_a_a"
+            name="test[]"
             required=""
-            showerror="false"
             type="checkbox"
             value="a"
           />
@@ -155,17 +141,18 @@ exports[`CheckGroup should match snapshot props 1`] = `
           >
             a
           </span>
-           
         </label>
+         
         
         <label
           class="_atom_frm__label _atom_frm__label___checkbox"
+          for="_b_b"
         >
           <input
             class="_atom_frm__checkbox"
-            name="test"
+            id="_b_b"
+            name="test[]"
             required=""
-            showerror="false"
             type="checkbox"
             value="b"
           />
@@ -175,17 +162,18 @@ exports[`CheckGroup should match snapshot props 1`] = `
           >
             b
           </span>
-           
         </label>
+         
         
         <label
           class="_atom_frm__label _atom_frm__label___checkbox"
+          for="_c_c"
         >
           <input
             class="_atom_frm__checkbox"
-            name="test"
+            id="_c_c"
+            name="test[]"
             required=""
-            showerror="false"
             type="checkbox"
             value="c"
           />
@@ -195,21 +183,10 @@ exports[`CheckGroup should match snapshot props 1`] = `
           >
             c
           </span>
-           
         </label>
+         
       </div>
        
-      <div
-        class="_atom_frm__message"
-      >
-         
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
-      </div>
       
     </div>
   </div>
@@ -247,24 +224,13 @@ exports[`Combo should match snapshot default 1`] = `
     >
        
       <select
-        class="_atom_frm__base _atom_frm__select _atom_frm__standard"
+        class="_atom_frm__base _atom_frm__select _atom_frm__standard "
         id="test"
         name="test"
       >
         
       </select>
        
-      <div
-        class="_atom_frm__message"
-      >
-         
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
-      </div>
       
     </div>
   </div>
@@ -288,7 +254,7 @@ exports[`Combo should match snapshot props 1`] = `
       </label>
        
       <select
-        class="_atom_frm__base _atom_frm__select _atom_frm__outline"
+        class="_atom_frm__base _atom_frm__select _atom_frm__outline "
         id="test"
         name="test"
         required=""
@@ -301,17 +267,11 @@ exports[`Combo should match snapshot props 1`] = `
       >
         <div
           class="_atom_frm__error___message"
-          title=""
+          title="Constraints not satisfied"
         >
-          
+          Constraints not satisfied
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
       </div>
       
     </div>
@@ -327,7 +287,7 @@ exports[`Datalist should match snapshot default 1`] = `
     >
        
       <input
-        class="_atom_frm__base _atom_frm__outline"
+        class="_atom_frm__base _atom_frm__outline "
         id="test"
         list="test_list"
         name="test"
@@ -348,12 +308,6 @@ exports[`Datalist should match snapshot default 1`] = `
           
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
       </div>
       
     </div>
@@ -378,7 +332,7 @@ exports[`Datalist should match snapshot props 1`] = `
       </label>
        
       <input
-        class="_atom_frm__base _atom_frm__outline"
+        class="_atom_frm__base _atom_frm__outline "
         id="test"
         list="test_list"
         name="test"
@@ -417,12 +371,6 @@ exports[`Datalist should match snapshot props 1`] = `
           
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
       </div>
       
     </div>
@@ -435,7 +383,7 @@ exports[`Input invalid type 1`] = `
   <div>
     <input
       class="_atom_frm__base "
-      type="text"
+      type="xxx"
     />
   </div>
 </body>
@@ -469,6 +417,7 @@ exports[`Label should match snapshot default 1`] = `
   <div>
     <label
       class="_atom_frm__label"
+      for="_50ca841758ea5e470"
     />
   </div>
 </body>
@@ -514,17 +463,6 @@ exports[`Radio should match snapshot default 1`] = `
         class="_atom_frm__group"
       />
        
-      <div
-        class="_atom_frm__message"
-      >
-         
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
-      </div>
       
     </div>
   </div>
@@ -553,6 +491,7 @@ exports[`Radio should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          for="_1_Lagden"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -567,11 +506,12 @@ exports[`Radio should match snapshot props 1`] = `
           >
             Lagden
           </span>
-           
         </label>
+         
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          for="_2_Takamoto"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -586,11 +526,12 @@ exports[`Radio should match snapshot props 1`] = `
           >
             Takamoto
           </span>
-           
         </label>
+         
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          for="_3_Tadashi"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -605,11 +546,12 @@ exports[`Radio should match snapshot props 1`] = `
           >
             Tadashi
           </span>
-           
         </label>
+         
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          for="_4_Rita"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -624,11 +566,12 @@ exports[`Radio should match snapshot props 1`] = `
           >
             Rita
           </span>
-           
         </label>
+         
         
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          for="_5_Jorge"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -643,8 +586,8 @@ exports[`Radio should match snapshot props 1`] = `
           >
             Jorge
           </span>
-           
         </label>
+         
       </div>
        
       <div
@@ -657,12 +600,6 @@ exports[`Radio should match snapshot props 1`] = `
           
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
       </div>
       
     </div>
@@ -678,7 +615,7 @@ exports[`Read should match snapshot default 1`] = `
     >
        
       <div
-        class="_atom_frm__base _atom_frm__wipe"
+        class="_atom_frm__base _atom_frm__wipe "
         id="test"
       >
         1
@@ -707,7 +644,7 @@ exports[`Read should match snapshot props 1`] = `
       </label>
        
       <div
-        class="_atom_frm__base _atom_frm__outline"
+        class="_atom_frm__base _atom_frm__outline "
         id="test"
         name="test"
       >
@@ -720,7 +657,6 @@ exports[`Read should match snapshot props 1`] = `
          
         <div
           class="_atom_frm__helper___message"
-          title=""
         >
           
         </div>
@@ -745,7 +681,7 @@ exports[`Request should match snapshot default 1`] = `
           class="_atom_frm__request_target"
         >
           <input
-            class="_atom_frm__base _atom_frm__standard"
+            class="_atom_frm__base _atom_frm__standard "
             id="test"
             name="test"
             type="text"
@@ -755,17 +691,6 @@ exports[`Request should match snapshot default 1`] = `
          
       </div>
        
-      <div
-        class="_atom_frm__message"
-      >
-         
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
-      </div>
       
     </div>
   </div>
@@ -795,7 +720,7 @@ exports[`Request should match snapshot props 1`] = `
           class="_atom_frm__request_target"
         >
           <input
-            class="_atom_frm__base _atom_frm__outline"
+            class="_atom_frm__base _atom_frm__outline "
             id="test"
             name="test"
             required=""
@@ -811,17 +736,11 @@ exports[`Request should match snapshot props 1`] = `
       >
         <div
           class="_atom_frm__error___message"
-          title=""
+          title="Constraints not satisfied"
         >
-          
+          Constraints not satisfied
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
       </div>
       
     </div>
@@ -893,23 +812,12 @@ exports[`Text should match snapshot default 1`] = `
     >
        
       <input
-        class="_atom_frm__base _atom_frm__standard"
+        class="_atom_frm__base _atom_frm__standard "
         id="test"
         name="test"
         type="text"
       />
        
-      <div
-        class="_atom_frm__message"
-      >
-         
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
-      </div>
       
     </div>
   </div>
@@ -933,7 +841,7 @@ exports[`Text should match snapshot props 1`] = `
       </label>
        
       <input
-        class="_atom_frm__base _atom_frm__outline"
+        class="_atom_frm__base _atom_frm__outline "
         id="test"
         name="test"
         required=""
@@ -945,17 +853,11 @@ exports[`Text should match snapshot props 1`] = `
       >
         <div
           class="_atom_frm__error___message"
-          title=""
+          title="Constraints not satisfied"
         >
-          
+          Constraints not satisfied
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-          title=""
-        >
-          
-        </div>
       </div>
       
     </div>

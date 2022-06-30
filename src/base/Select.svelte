@@ -1,6 +1,8 @@
 <svelte:options accessors={true} />
 
 <script>
+	import {afterUpdate, createEventDispatcher} from 'svelte'
+
 	// Props
 	export let value = ''
 	export let options = []
@@ -15,6 +17,15 @@
 
 	// Bind HTML Element
 	export let node = undefined
+
+	const dispatch = createEventDispatcher()
+
+	afterUpdate(() => {
+		const valid = node.checkValidity()
+		if (valid) {
+			dispatch('valid')
+		}
+	})
 </script>
 
 <select
@@ -24,6 +35,7 @@
 	on:blur
 	on:focus
 	on:change
+	on:invalid
 	{...$$restProps}
 >
 	{#if first}
@@ -31,7 +43,7 @@
 	{/if}
 
 	{#if Array.isArray(options) && options.length > 0}
-		{#each options as {value, text, props = {}} (`${value}_${text}`)}
+		{#each options as {value, text, props = {}} (`_${value}_${text}`)}
 			<option {value} {...props}>{text}</option>
 		{/each}
 	{/if}

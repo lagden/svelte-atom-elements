@@ -1,6 +1,8 @@
 <svelte:options accessors={true} />
 
 <script>
+	import {uuid} from '@tadashi/common'
+
 	// Props
 	export let disabled = false
 	export let required = false
@@ -13,6 +15,7 @@
 </script>
 
 <label
+	for={$$restProps?.for ?? `_${uuid()}`}
 	class="_atom_frm__label {className}"
 	class:_atom_frm__label___disabled={disabled}
 	class:_atom_frm__label___required={required}

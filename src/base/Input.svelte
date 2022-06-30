@@ -1,6 +1,8 @@
 <svelte:options accessors={true} />
 
 <script>
+	import {afterUpdate, createEventDispatcher} from 'svelte'
+
 	// Props
 	export let value = ''
 
@@ -8,27 +10,20 @@
 	let className = ''
 	export {className as class}
 
+	// Type
+	$$restProps.type = $$restProps?.type ?? 'text'
+
 	// Bind HTML Element
 	export let node = undefined
 
-	// Mapa dos tipos permitidos
-	const types = new Set([
-		'date',
-		'datetime-local',
-		'email',
-		'hidden',
-		'month',
-		'number',
-		'password',
-		'search',
-		'tel',
-		'text',
-		'time',
-		'url',
-		'week',
-	])
-	$$restProps.type = $$restProps?.type ?? 'text'
-	$$restProps.type = types.has($$restProps.type) ? $$restProps.type : 'text'
+	const dispatch = createEventDispatcher()
+
+	afterUpdate(() => {
+		const valid = node.checkValidity()
+		if (valid) {
+			dispatch('valid')
+		}
+	})
 </script>
 
 <input
@@ -40,5 +35,6 @@
 	on:focus
 	on:click
 	on:change
+	on:invalid
 	{...$$restProps}
 >

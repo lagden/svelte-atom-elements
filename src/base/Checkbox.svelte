@@ -1,6 +1,8 @@
 <svelte:options accessors={true} />
 
 <script>
+	import {afterUpdate, createEventDispatcher} from 'svelte'
+
 	// Props
 	export let checked = undefined
 	export let switchMode = false
@@ -11,7 +13,16 @@
 	export {className as class}
 
 	// Bind HTML Element
-	export let node = false
+	export let node = undefined
+
+	const dispatch = createEventDispatcher()
+
+	afterUpdate(() => {
+		const valid = node.checkValidity()
+		if (valid) {
+			dispatch('valid')
+		}
+	})
 </script>
 
 <input
@@ -26,5 +37,6 @@
 	on:focus
 	on:click
 	on:change
+	on:invalid
 	{...$$restProps}
 >

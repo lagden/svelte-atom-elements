@@ -9,9 +9,9 @@
 	export let value = ''
 	export let outline = true
 	export let wipe = false
-	export let showMessage = true
 	export let showHelper = true
 	export let helper = ''
+	export let css = ''
 	export let label = false
 	export let id = `read_${uuid()}`
 
@@ -21,12 +21,9 @@
 	// Bind HTML Element
 	export let node = undefined
 
-	const validationMessage = ''
-	const showError = false
-
 	// Estilo do formulário
-	let css = outline ? '_atom_frm__outline' : '_atom_frm__standard'
-	css = wipe ? '_atom_frm__wipe' : css
+	let styleInput = outline ? '_atom_frm__outline' : '_atom_frm__standard'
+	styleInput = wipe ? '_atom_frm__wipe' : styleInput
 </script>
 
 <div class="{className}">
@@ -39,17 +36,15 @@
 		>{@html label}</Label>
 	{/if}
 	<div
-		class="_atom_frm__base {css}"
+		class="_atom_frm__base {styleInput} {css}"
 		bind:this={node}
 		on:click
 		{...(id ? {id} : {})}
 		{...$$restProps}
 	>{value}</div>
 	<Message
-		{showMessage}
-		{showError}
 		{showHelper}
-		{validationMessage}
-		{helper}
+		showError={false}
+		validationMessage=""
 	><slot name="helper">{helper}</slot></Message>
 </div>

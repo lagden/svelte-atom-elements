@@ -1,21 +1,20 @@
 <svelte:options accessors={true} />
 
 <script>
-	import {onMount, tick} from 'svelte'
 	import {uuid} from '@tadashi/common'
 
 	import Label from '../base/Label.svelte'
 	import Select from '../base/Select.svelte'
 	import Message from '../helper/Message.svelte'
 
+	export let options = []
 	export let value = ''
 	export let outline = true
 	export let showError = true
-	export let showMessage = true
-	export let showHelper = true
+	export let showHelper = false
 	export let helper = ''
+	export let css = ''
 	export let label = false
-	export let options = []
 	export let id = `_${uuid()}`
 
 	let className = ''
@@ -24,23 +23,19 @@
 	// Estilo do formulário
 	const styleInput = outline ? '_atom_frm__outline' : '_atom_frm__standard'
 
+	// Bind HTML Element
+	export let component = undefined
+
 	// Validação via API do navegador
-	let component
 	let validationMessage = ''
 
-	async function updateValidationMessage() {
-		await tick()
-		validationMessage = component?.node?.validationMessage ?? ''
+	function onInvalid() {
+		validationMessage = this?.validationMessage ?? ''
 	}
 
-	$: value, component, updateValidationMessage()
-
-	onMount(() => {
-		component?.node?.addEventListener('validationMessage', updateValidationMessage)
-		return () => {
-			component?.node?.removeEventListener('validationMessage', updateValidationMessage)
-		}
-	})
+	function onValid() {
+		validationMessage = ''
+	}
 </script>
 
 <div class="{className}">
@@ -53,21 +48,21 @@
 		>{@html label}</Label>
 	{/if}
 	<Select
-		class="{styleInput}"
+		class="{styleInput} {css}"
 		bind:this={component}
 		bind:value
 		on:blur
 		on:focus
 		on:change
+		on:invalid={onInvalid}
+		on:valid={onValid}
 		{options}
 		{...(id ? {id} : {})}
 		{...$$restProps}
 	/>
 	<Message
-		{showMessage}
-		{showError}
 		{showHelper}
+		{showError}
 		{validationMessage}
-		{helper}
 	><slot name="helper">{helper}</slot></Message>
 </div>

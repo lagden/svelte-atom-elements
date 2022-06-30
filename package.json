@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-atom-elements",
-  "version": "1.11.1",
+  "version": "1.11.2",
   "repository": "github:lagden/svelte-atom-elements",
   "description": "Svelte components",
   "keywords": [
@@ -32,26 +32,27 @@
     "prepublishOnly": "npm run build",
     "pretest": "npm run eslint",
     "test": "NODE_OPTIONS=\"--experimental-vm-modules\" jest test --env=./custom-test-env.js --coverage --coverageReporters=lcov --coverageReporters=text",
+    "test_": "jest test --coverage --coverageReporters=lcov --coverageReporters=text",
     "test:watch": "npm test -- --watch"
   },
   "dependencies": {
-    "@tadashi/common": "1.2.0"
+    "@tadashi/common": "1.4.1"
   },
   "devDependencies": {
-    "@babel/core": "7.18.5",
+    "@babel/core": "7.18.6",
     "@babel/eslint-parser": "7.18.2",
-    "@babel/preset-env": "7.18.2",
+    "@babel/preset-env": "7.18.6",
     "@testing-library/svelte": "3.1.3",
-    "babel-jest": "28.1.1",
-    "esbuild": "0.14.46",
+    "babel-jest": "28.1.2",
+    "esbuild": "0.14.48",
     "esbuild-svelte": "0.7.1",
     "eslint": "8.18.0",
     "eslint-config-xo": "0.41.0",
     "eslint-plugin-html": "6.2.0",
     "eslint-plugin-svelte3": "4.0.0",
     "eslint-plugin-unicorn": "42.0.0",
-    "jest": "28.1.1",
-    "jest-environment-jsdom": "28.1.1",
+    "jest": "28.1.2",
+    "jest-environment-jsdom": "28.1.2",
     "npm-run-all": "4.1.5",
     "prettier": "2.7.1",
     "prettier-plugin-svelte": "2.7.0",
