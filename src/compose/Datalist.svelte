@@ -13,7 +13,7 @@
 	export let value = ''
 	export let outline = true
 	export let showError = true
-	export let showHelper = false
+	export let showHelper = true
 	export let helper = ''
 	export let css = ''
 	export let label = false

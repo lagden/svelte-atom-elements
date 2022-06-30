@@ -13,7 +13,7 @@
 	export let outline = false
 	export let validate = false
 	export let showError = true
-	export let showHelper = false
+	export let showHelper = true
 	export let helper = ''
 	export let css = ''
 	export let label = false
@@ -26,6 +26,9 @@
 	name = `${name}[]`
 
 	let wrapper
+	let node
+
+	// Validação via API do navegador
 	let validationMessage = ''
 
 	function customValidate() {
@@ -36,7 +39,8 @@
 		const nodes = wrapper.querySelectorAll('input[type=checkbox]')
 		const invalid = [...nodes].every(node => node.checked === false)
 		const msg = invalid ? 'Selecione pelo menos uma opção.' : ''
-		nodes?.item(0)?.setCustomValidity(msg)
+		node = nodes?.item(0)
+		node?.setCustomValidity(msg)
 		validationMessage = msg
 	}
 
@@ -46,9 +50,11 @@
 		if (validate) {
 			customValidate()
 
-			const valid = node.checkValidity()
-			if (valid) {
-				dispatch('valid')
+			if (node) {
+				const valid = node?.checkValidity()
+				if (valid) {
+					dispatch('valid')
+				}
 			}
 		}
 	})

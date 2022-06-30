@@ -12,7 +12,7 @@
 	export let custom = false
 	export let toggleMode = false
 	export let showError = true
-	export let showHelper = false
+	export let showHelper = true
 	export let helper = ''
 	export let css = ''
 	export let label = false
