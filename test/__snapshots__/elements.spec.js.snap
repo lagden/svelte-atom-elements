@@ -10,10 +10,11 @@ exports[`Check should match snapshot default 1`] = `
       <label
         aria-labelledby="test_label"
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="_f9c9c31758ea5e470"
+        for="test"
       >
         <input
           class="_atom_frm__checkbox"
+          id="test"
           name="test"
           type="checkbox"
         />
@@ -54,10 +55,11 @@ exports[`Check should match snapshot props 1`] = `
       <label
         aria-labelledby="test_label"
         class="_atom_frm__label _atom_frm__label___checkbox"
-        for="_4831c11758ea5e470"
+        for="test"
       >
         <input
           class="_atom_frm__checkbox"
+          id="test"
           name="test"
           type="checkbox"
         />
@@ -417,7 +419,7 @@ exports[`Label should match snapshot default 1`] = `
   <div>
     <label
       class="_atom_frm__label"
-      for="_50ca841758ea5e470"
+      for="inputID"
     />
   </div>
 </body>

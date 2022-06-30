@@ -45,6 +45,7 @@
 		>{@html label}</span>
 	{/if}
 	<Label
+		{...(id ? {for: id} : {})}
 		aria-labelledby="{id}_label"
 		class="_atom_frm__label___checkbox"
 	>
@@ -58,6 +59,7 @@
 			on:change
 			on:invalid={onInvalid}
 			on:valid={onValid}
+			{...(id ? {id} : {})}
 			{...$$restProps}
 		/>
 		{#if labelCheck}

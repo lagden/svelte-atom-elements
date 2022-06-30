@@ -93,7 +93,11 @@ describe('Label', () => {
 	afterEach(cleanup)
 
 	test('should match snapshot default', () => {
-		const {container} = render(Label)
+		const {container} = render(Label, {
+			props: {
+				for: 'inputID',
+			},
+		})
 		expect(container).toMatchSnapshot()
 	})
 
