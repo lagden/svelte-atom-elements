@@ -31,6 +31,15 @@
 	// Validação via API do navegador
 	let validationMessage = ''
 
+	function _ignoreCleanup(node, value = true) {
+		if (value === true) {
+			node.dataset.ignoreCleanup = value
+		} else {
+			Reflect.deleteProperty(node.dataset, 'ignoreCleanup')
+		}
+		return node
+	}
+
 	function customValidate() {
 		if (!wrapper) {
 			return
@@ -38,6 +47,9 @@
 
 		const nodes = wrapper.querySelectorAll('input[type=checkbox]')
 		const invalid = [...nodes].every(node => node.checked === false)
+		for (const node of nodes) {
+			_ignoreCleanup(node, invalid)
+		}
 		const msg = invalid ? 'Selecione pelo menos uma opção.' : ''
 		node = nodes?.item(0)
 		node?.setCustomValidity(msg)
@@ -73,7 +85,7 @@
 	<div
 		bind:this={wrapper}
 		aria-labelledby="{id}_label"
-		class="_atom_frm__group {css}"
+		class={css ?? '_atom_frm__group'}
 	>
 		{#each options as {value, text, props = {}}, idx (`_${value}_${text}`)}
 			<slot name="loop" data={{value, text, props, idx}} >

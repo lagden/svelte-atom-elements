@@ -102,7 +102,7 @@ exports[`CheckGroup should match snapshot default 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class="_atom_frm__group "
+        class=""
       />
        
       <div
@@ -142,7 +142,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class="_atom_frm__group "
+        class=""
       >
         
         <label
