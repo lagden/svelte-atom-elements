@@ -1,6 +1,7 @@
 /* istanbul ignore file */
 export {default as Checkbox} from './base/Checkbox.svelte'
 export {default as Input} from './base/Input.svelte'
+export {default as InputRadio} from './base/InputRadio.svelte'
 export {default as Label} from './base/Label.svelte'
 export {default as Select} from './base/Select.svelte'
 

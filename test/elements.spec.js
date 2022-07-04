@@ -6,6 +6,7 @@ import {
 	// Base
 	Checkbox,
 	Input,
+	InputRadio,
 	Label,
 	Select,
 	// Compose
@@ -79,10 +80,32 @@ describe('Input', () => {
 		expect(container).toMatchSnapshot()
 	})
 
+	// fazer teste passando checkbox ou radio
 	test('invalid type', () => {
 		const {container} = render(Input, {
 			props: {
 				type: 'xxx',
+			},
+		})
+		expect(container).toMatchSnapshot()
+	})
+})
+
+describe('InputRadio', () => {
+	afterEach(cleanup)
+
+	test('should match snapshot default', () => {
+		const {container} = render(InputRadio)
+		expect(container).toMatchSnapshot()
+	})
+
+	test('should match snapshot props', () => {
+		const {container} = render(InputRadio, {
+			props: {
+				value: 'foo',
+				class: 'customCss',
+				type: 'tel',
+				required: true,
 			},
 		})
 		expect(container).toMatchSnapshot()

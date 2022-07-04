@@ -469,6 +469,29 @@ exports[`Input should match snapshot props 1`] = `
 </body>
 `;
 
+exports[`InputRadio should match snapshot default 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__radio"
+      type="radio"
+    />
+  </div>
+</body>
+`;
+
+exports[`InputRadio should match snapshot props 1`] = `
+<body>
+  <div>
+    <input
+      class="_atom_frm__radio customCss"
+      required=""
+      type="tel"
+    />
+  </div>
+</body>
+`;
+
 exports[`Label should match snapshot default 1`] = `
 <body>
   <div>
@@ -520,16 +543,6 @@ exports[`Radio should match snapshot default 1`] = `
         class="_atom_frm__group"
       />
        
-      <div
-        class="_atom_frm__message"
-      >
-         
-        <div
-          class="_atom_frm__helper___message"
-        >
-          
-        </div>
-      </div>
       
     </div>
   </div>
@@ -555,10 +568,9 @@ exports[`Radio should match snapshot props 1`] = `
         aria-labelledby="test_label"
         class="_atom_frm__group _atom_frm__group___toggle"
       >
-        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_1_Lagden"
+          for="_14996f1758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -575,10 +587,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
-        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_2_Takamoto"
+          for="_2f61b31758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -595,10 +606,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
-        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_3_Tadashi"
+          for="_295d821758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -615,10 +625,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
-        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_4_Rita"
+          for="_509f181758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -635,10 +644,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
-        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_5_Jorge"
+          for="_c561f31758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -667,11 +675,6 @@ exports[`Radio should match snapshot props 1`] = `
           
         </div>
          
-        <div
-          class="_atom_frm__helper___message"
-        >
-          
-        </div>
       </div>
       
     </div>
