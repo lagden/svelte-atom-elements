@@ -1,8 +1,9 @@
 <svelte:options accessors={true} />
 
 <script>
-	import {afterUpdate, createEventDispatcher} from 'svelte'
+	import slugify from '@sindresorhus/slugify'
 	import {uuid} from '@tadashi/common'
+	import {afterUpdate, createEventDispatcher} from 'svelte'
 
 	import Label from '../base/Label.svelte'
 	import Message from '../helper/Message.svelte'
@@ -87,15 +88,14 @@
 		aria-labelledby="{id}_label"
 		class={css ?? '_atom_frm__group'}
 	>
-		{#each options as {value, text, props = {}}, idx (`_${value}_${text}`)}
+		{#each options as {value, text, props = {}}, idx (slugify(`_${value}_${text}`))}
 			<slot name="loop" data={{value, text, props, idx}} >
-				<Label class="_atom_frm__label___checkbox" for={`_${value}_${text}`}>
+				<Label class="_atom_frm__label___checkbox">
 					<input
 						type="checkbox"
 						class="_atom_frm__checkbox"
 						class:_atom_frm__checkbox___switch={switchMode}
 						class:_atom_frm__checkbox___outline={outline}
-						id={`_${value}_${text}`}
 						bind:group
 						on:blur
 						on:focus

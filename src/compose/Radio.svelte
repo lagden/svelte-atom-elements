@@ -1,6 +1,7 @@
 <svelte:options accessors={true} />
 
 <script>
+	import slugify from '@sindresorhus/slugify'
 	import {uuid} from '@tadashi/common'
 
 	import Label from '../base/Label.svelte'
@@ -19,6 +20,9 @@
 	export let label = false
 	export let id = `_${uuid()}`
 	export let name
+
+	console.log('>>>>>>>', label)
+	console.log('>>>>>>>', id)
 
 	let className = ''
 	export {className as class}
@@ -52,7 +56,7 @@
 		class:_atom_frm__radio___outline={outline}
 		class:_atom_frm__radio___custom={custom}
 	>
-		{#each options as {value, text, props = {}}, idx}
+		{#each options as {value, text, props = {}}, idx (slugify(`_${value}_${text}`))}
 			<slot name="loop" data={{value, text, props, idx}} >
 				<Label class="_atom_frm__label___radio" {toggleMode}>
 					<InputRadio

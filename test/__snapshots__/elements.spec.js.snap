@@ -147,11 +147,9 @@ exports[`CheckGroup should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___checkbox"
-          for="_a_a"
         >
           <input
             class="_atom_frm__checkbox"
-            id="_a_a"
             name="test[]"
             required=""
             type="checkbox"
@@ -168,11 +166,9 @@ exports[`CheckGroup should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___checkbox"
-          for="_b_b"
         >
           <input
             class="_atom_frm__checkbox"
-            id="_b_b"
             name="test[]"
             required=""
             type="checkbox"
@@ -189,11 +185,9 @@ exports[`CheckGroup should match snapshot props 1`] = `
         
         <label
           class="_atom_frm__label _atom_frm__label___checkbox"
-          for="_c_c"
         >
           <input
             class="_atom_frm__checkbox"
-            id="_c_c"
             name="test[]"
             required=""
             type="checkbox"
@@ -568,9 +562,9 @@ exports[`Radio should match snapshot props 1`] = `
         aria-labelledby="test_label"
         class="_atom_frm__group _atom_frm__group___toggle"
       >
+        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_14996f1758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -587,9 +581,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
+        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_2f61b31758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -606,9 +600,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
+        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_295d821758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -625,9 +619,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
+        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_509f181758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -644,9 +638,9 @@ exports[`Radio should match snapshot props 1`] = `
           </span>
         </label>
          
+        
         <label
           class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
-          for="_c561f31758ea5e470"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
