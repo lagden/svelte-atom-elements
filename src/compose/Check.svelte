@@ -11,7 +11,7 @@
 	export let showError = true
 	export let showHelper = true
 	export let helper = ''
-	export let css = ''
+	export let custom = ''
 	export let label = undefined
 	export let labelCheck = undefined
 	export let id = `_${uuid()}`
@@ -50,7 +50,7 @@
 		class="_atom_frm__label___checkbox"
 	>
 		<Checkbox
-			class="{css}"
+			class="{custom}"
 			bind:this={component}
 			bind:checked
 			on:blur

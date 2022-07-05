@@ -6,11 +6,11 @@
 	// Props
 	export let group = undefined
 	export let value = undefined
+	export let base = true
 	export let outline = false
-	export let custom = false
 	export let toggleMode = false
 
-	// CSS
+	// Css
 	let className = ''
 	export {className as class}
 
@@ -29,10 +29,10 @@
 
 <input
 	type="radio"
-	class="_atom_frm__radio {className}"
+	class={className}
+	class:_atom_frm__radio={base}
 	class:_atom_frm__radio___toggle={toggleMode}
 	class:_atom_frm__radio___outline={outline}
-	class:_atom_frm__radio___custom={custom}
 	bind:this={node}
 	bind:group
 	{value}

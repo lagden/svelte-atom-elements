@@ -10,15 +10,17 @@
 
 	export let group = undefined
 	export let options = []
-	export let outline = false
-	export let custom = false
 	export let toggleMode = false
+	export let base = true
+	export let useGroup = true
+	export let outline = false
 	export let showError = true
-	export let showHelper = false
+	export let showHelper = true
 	export let helper = ''
-	export let css = ''
-	export let label = false
+	export let custom = ''
+	export let label = undefined
 	export let id = `_${uuid()}`
+
 	export let name
 
 	let className = ''
@@ -27,7 +29,7 @@
 	// Validação via API do navegador
 	export let validationMessage = ''
 
-	function onInvalid(event) {
+	function onInvalid() {
 		validationMessage = this?.validationMessage ?? ''
 	}
 
@@ -48,18 +50,18 @@
 	{/if}
 	<div
 		aria-labelledby="{id}_label"
-		class="_atom_frm__group {css}"
-		class:_atom_frm__group___toggle={toggleMode}
+		class={custom}
+		class:_atom_frm__group={useGroup}
 		class:_atom_frm__radio___outline={outline}
-		class:_atom_frm__radio___custom={custom}
+		class:_atom_frm__group___toggle={toggleMode}
 	>
 		{#each options as {value, text, props = {}}, idx (slugify(`_${value}_${text}`))}
 			<slot name="loop" data={{value, text, props, idx}} >
 				<Label class="_atom_frm__label___radio" {toggleMode}>
 					<InputRadio
-						{toggleMode}
+						{base}
 						{outline}
-						{custom}
+						{toggleMode}
 						{value}
 						{name}
 						bind:group

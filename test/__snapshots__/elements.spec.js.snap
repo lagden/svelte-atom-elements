@@ -102,7 +102,7 @@ exports[`CheckGroup should match snapshot default 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class=""
+        class="_atom_frm__group"
       />
        
       <div
@@ -134,7 +134,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
       class="customCss"
     >
       <span
-        class="_atom_frm__label _atom_frm__label___required"
+        class="_atom_frm__label"
         id="test_choices_label"
       >
         Choices:
@@ -142,7 +142,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
        
       <div
         aria-labelledby="test_choices_label"
-        class=""
+        class="_atom_frm__group"
       >
         
         <label
@@ -151,7 +151,6 @@ exports[`CheckGroup should match snapshot props 1`] = `
           <input
             class="_atom_frm__checkbox"
             name="test[]"
-            required=""
             type="checkbox"
             value="a"
           />
@@ -170,7 +169,6 @@ exports[`CheckGroup should match snapshot props 1`] = `
           <input
             class="_atom_frm__checkbox"
             name="test[]"
-            required=""
             type="checkbox"
             value="b"
           />
@@ -189,7 +187,6 @@ exports[`CheckGroup should match snapshot props 1`] = `
           <input
             class="_atom_frm__checkbox"
             name="test[]"
-            required=""
             type="checkbox"
             value="c"
           />
@@ -234,7 +231,7 @@ exports[`Checkbox should match snapshot props 1`] = `
 <body>
   <div>
     <input
-      class="_atom_frm__checkbox customCss _atom_frm__checkbox___switch"
+      class="customCss _atom_frm__checkbox _atom_frm__checkbox___switch"
       required=""
       type="checkbox"
     />
@@ -478,7 +475,7 @@ exports[`InputRadio should match snapshot props 1`] = `
 <body>
   <div>
     <input
-      class="_atom_frm__radio customCss"
+      class="customCss _atom_frm__radio"
       required=""
       type="tel"
     />
@@ -537,6 +534,16 @@ exports[`Radio should match snapshot default 1`] = `
         class="_atom_frm__group"
       />
        
+      <div
+        class="_atom_frm__message"
+      >
+         
+        <div
+          class="_atom_frm__helper___message"
+        >
+          
+        </div>
+      </div>
       
     </div>
   </div>
@@ -669,6 +676,11 @@ exports[`Radio should match snapshot props 1`] = `
           
         </div>
          
+        <div
+          class="_atom_frm__helper___message"
+        >
+          
+        </div>
       </div>
       
     </div>

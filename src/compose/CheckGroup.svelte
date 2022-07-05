@@ -11,12 +11,13 @@
 	export let group = []
 	export let options = []
 	export let switchMode = false
+	export let useGroup = true
 	export let outline = false
-	export let validate = false
+	export let required = false
 	export let showError = true
 	export let showHelper = true
 	export let helper = ''
-	export let css = ''
+	export let custom = ''
 	export let label = false
 	export let id = `_${uuid()}`
 
@@ -48,19 +49,21 @@
 
 		const nodes = wrapper.querySelectorAll('input[type=checkbox]')
 		const invalid = [...nodes].every(node => node.checked === false)
+		const msg = invalid ? 'Selecione pelo menos uma opção.' : ''
 		for (const node of nodes) {
 			_ignoreCleanup(node, invalid)
+			node?.setCustomValidity(msg)
 		}
-		const msg = invalid ? 'Selecione pelo menos uma opção.' : ''
-		node = nodes?.item(0)
-		node?.setCustomValidity(msg)
+		// const msg = invalid ? 'Selecione pelo menos uma opção.' : ''
+		// node = nodes?.item(0)
+		// node?.setCustomValidity(msg)
 		validationMessage = msg
 	}
 
 	const dispatch = createEventDispatcher()
 
 	afterUpdate(() => {
-		if (validate) {
+		if (required) {
 			customValidate()
 
 			if (node) {
@@ -86,7 +89,8 @@
 	<div
 		bind:this={wrapper}
 		aria-labelledby="{id}_label"
-		class={css ?? '_atom_frm__group'}
+		class={custom}
+		class:_atom_frm__group={useGroup}
 	>
 		{#each options as {value, text, props = {}}, idx (slugify(`_${value}_${text}`))}
 			<slot name="loop" data={{value, text, props, idx}} >

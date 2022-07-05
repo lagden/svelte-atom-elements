@@ -5,8 +5,9 @@
 
 	// Props
 	export let checked = undefined
-	export let switchMode = false
+	export let base = true
 	export let outline = false
+	export let switchMode = false
 
 	// CSS
 	let className = ''
@@ -27,7 +28,8 @@
 
 <input
 	type="checkbox"
-	class="_atom_frm__checkbox {className}"
+	class={className}
+	class:_atom_frm__checkbox={base}
 	class:_atom_frm__checkbox___switch={switchMode}
 	class:_atom_frm__checkbox___outline={outline}
 	bind:this={node}
