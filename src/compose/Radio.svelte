@@ -1,15 +1,12 @@
 <svelte:options accessors={true} />
 
 <script>
-	// import slugify from '@sindresorhus/slugify'
+	import slugify from '@sindresorhus/slugify'
 	import {uuid} from '@tadashi/common'
 
 	import Label from '../base/Label.svelte'
 	import InputRadio from '../base/InputRadio.svelte'
 	import Message from '../helper/Message.svelte'
-
-	// remover quando ajustar o slugify
-	const slugify = (...args) => { console.debug(args) }
 
 	export let group = undefined
 	export let options = []
@@ -23,9 +20,6 @@
 	export let label = false
 	export let id = `_${uuid()}`
 	export let name
-
-	console.log('>>>>>>>', label)
-	console.log('>>>>>>>', id)
 
 	let className = ''
 	export {className as class}

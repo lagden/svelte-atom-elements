@@ -1,15 +1,12 @@
 <svelte:options accessors={true} />
 
 <script>
-	// import slugify from '@sindresorhus/slugify'
+	import slugify from '@sindresorhus/slugify'
 	import {uuid} from '@tadashi/common'
 	import {afterUpdate, createEventDispatcher} from 'svelte'
 
 	import Label from '../base/Label.svelte'
 	import Message from '../helper/Message.svelte'
-
-	// remover quando ajustar o slugify
-	const slugify = (...args) => { console.debug(args) }
 
 	export let group = []
 	export let options = []
