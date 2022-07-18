@@ -9,7 +9,7 @@ exports[`Check should match snapshot default 1`] = `
        
       <label
         aria-labelledby="test_label"
-        class="_atom_frm__label _atom_frm__label___checkbox"
+        class="_atom_frm__label___checkbox"
         for="test"
       >
         <input
@@ -51,7 +51,6 @@ exports[`Check should match snapshot props 1`] = `
       class="customCss"
     >
       <span
-        class="_atom_frm__label"
         id="test_label"
       >
         Do you agree with the terms?
@@ -59,7 +58,7 @@ exports[`Check should match snapshot props 1`] = `
        
       <label
         aria-labelledby="test_label"
-        class="_atom_frm__label _atom_frm__label___checkbox"
+        class="_atom_frm__label___checkbox"
         for="test"
       >
         <input
@@ -146,7 +145,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
       >
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox"
+          class="_atom_frm__label___checkbox _atom_frm__label"
         >
           <input
             class="_atom_frm__checkbox"
@@ -164,7 +163,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
          
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox"
+          class="_atom_frm__label___checkbox _atom_frm__label"
         >
           <input
             class="_atom_frm__checkbox"
@@ -182,7 +181,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
          
         
         <label
-          class="_atom_frm__label _atom_frm__label___checkbox"
+          class="_atom_frm__label___checkbox _atom_frm__label"
         >
           <input
             class="_atom_frm__checkbox"
@@ -325,7 +324,7 @@ exports[`Datalist should match snapshot default 1`] = `
     >
        
       <input
-        class="_atom_frm__base _atom_frm__outline "
+        class="_atom_frm__outline _atom_frm__base"
         id="test"
         list="test_list"
         name="test"
@@ -375,7 +374,7 @@ exports[`Datalist should match snapshot props 1`] = `
       </label>
        
       <input
-        class="_atom_frm__base _atom_frm__outline "
+        class="_atom_frm__outline _atom_frm__base"
         id="test"
         list="test_list"
         name="test"
@@ -430,7 +429,7 @@ exports[`Input invalid type 1`] = `
 <body>
   <div>
     <input
-      class="_atom_frm__base "
+      class="_atom_frm__base"
       type="xxx"
     />
   </div>
@@ -441,7 +440,7 @@ exports[`Input should match snapshot default 1`] = `
 <body>
   <div>
     <input
-      class="_atom_frm__base "
+      class="_atom_frm__base"
       type="text"
     />
   </div>
@@ -452,7 +451,7 @@ exports[`Input should match snapshot props 1`] = `
 <body>
   <div>
     <input
-      class="_atom_frm__base customCss"
+      class="customCss _atom_frm__base"
       required=""
       type="tel"
     />
@@ -498,7 +497,7 @@ exports[`Label should match snapshot props 1`] = `
 <body>
   <div>
     <label
-      class="_atom_frm__label customCss _atom_frm__label___required"
+      class="customCss _atom_frm__label _atom_frm__label___required"
       data-test="1"
       for="inputID"
     />
@@ -571,7 +570,7 @@ exports[`Radio should match snapshot props 1`] = `
       >
         
         <label
-          class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          class="_atom_frm__label___radio _atom_frm__label___toggle"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -590,7 +589,7 @@ exports[`Radio should match snapshot props 1`] = `
          
         
         <label
-          class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          class="_atom_frm__label___radio _atom_frm__label___toggle"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -609,7 +608,7 @@ exports[`Radio should match snapshot props 1`] = `
          
         
         <label
-          class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          class="_atom_frm__label___radio _atom_frm__label___toggle"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -628,7 +627,7 @@ exports[`Radio should match snapshot props 1`] = `
          
         
         <label
-          class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          class="_atom_frm__label___radio _atom_frm__label___toggle"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -647,7 +646,7 @@ exports[`Radio should match snapshot props 1`] = `
          
         
         <label
-          class="_atom_frm__label _atom_frm__label___radio _atom_frm__label___toggle"
+          class="_atom_frm__label___radio _atom_frm__label___toggle"
         >
           <input
             class="_atom_frm__radio _atom_frm__radio___toggle"
@@ -762,7 +761,7 @@ exports[`Request should match snapshot default 1`] = `
           class="_atom_frm__request_target"
         >
           <input
-            class="_atom_frm__base _atom_frm__standard "
+            class="_atom_frm__standard _atom_frm__base"
             id="test"
             name="test"
             type="text"
@@ -811,7 +810,7 @@ exports[`Request should match snapshot props 1`] = `
           class="_atom_frm__request_target"
         >
           <input
-            class="_atom_frm__base _atom_frm__outline "
+            class="_atom_frm__outline _atom_frm__base"
             id="test"
             name="test"
             required=""
@@ -908,7 +907,7 @@ exports[`Text should match snapshot default 1`] = `
     >
        
       <input
-        class="_atom_frm__base _atom_frm__standard "
+        class="_atom_frm__standard _atom_frm__base"
         id="test"
         name="test"
         type="text"
@@ -947,7 +946,7 @@ exports[`Text should match snapshot props 1`] = `
       </label>
        
       <input
-        class="_atom_frm__base _atom_frm__outline "
+        class="_atom_frm__outline _atom_frm__base"
         id="test"
         name="test"
         required=""
