@@ -4,7 +4,8 @@
 	import {afterUpdate, createEventDispatcher} from 'svelte'
 
 	// Props
-	export let value = ''
+	export let value = undefined
+	export let base = true
 
 	// CSS
 	let className = ''
@@ -27,7 +28,9 @@
 </script>
 
 <input
-	class="_atom_frm__base {className}"
+	class="{className}"
+	class:_atom_frm__base={base}
+	class:_atom_frm__range={$$restProps?.type === 'range'}
 	bind:this={node}
 	bind:value
 	on:input

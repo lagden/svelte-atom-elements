@@ -38,7 +38,6 @@
 	{#if label}
 		<span
 			id="{id}_label"
-			class="_atom_frm__label"
 			class:_atom_frm__label___disabled={$$restProps?.disabled ?? false}
 			class:_atom_frm__label___required={$$restProps?.required ?? false}
 			class:_atom_frm__label___bold={$$restProps?.boldMode ?? false}
@@ -46,6 +45,8 @@
 	{/if}
 	<Label
 		{...(id ? {for: id} : {})}
+		base={false}
+		alignStart={$$restProps?.alignStart ?? false}
 		aria-labelledby="{id}_label"
 		class="_atom_frm__label___checkbox"
 	>
@@ -63,7 +64,7 @@
 			{...$$restProps}
 		/>
 		{#if labelCheck}
-			<span aria-label="{labelCheck}">{labelCheck}</span>
+			<span aria-label="{labelCheck}">{@html labelCheck}</span>
 		{/if}
 	</Label>
 	<Message

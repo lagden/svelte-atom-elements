@@ -7,7 +7,7 @@
 	import Input from '../base/Input.svelte'
 	import Message from '../helper/Message.svelte'
 
-	export let value = ''
+	export let value = undefined
 	export let outline = true
 	export let showError = true
 	export let showHelper = true

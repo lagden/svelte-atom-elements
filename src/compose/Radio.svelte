@@ -57,7 +57,11 @@
 	>
 		{#each options as {value, text, props = {}}, idx (slugify(`_${value}_${text}`))}
 			<slot name="loop" data={{value, text, props, idx}} >
-				<Label class="_atom_frm__label___radio" {toggleMode}>
+				<Label
+					base={false}
+					{toggleMode}
+					class="_atom_frm__label___radio"
+				>
 					<InputRadio
 						{base}
 						{outline}
