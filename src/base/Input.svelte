@@ -6,6 +6,7 @@
 	// Props
 	export let value = undefined
 	export let base = true
+	export let isLoading = false
 
 	// CSS
 	let className = ''
@@ -31,6 +32,7 @@
 	class="{className}"
 	class:_atom_frm__base={base}
 	class:_atom_frm__range={$$restProps?.type === 'range'}
+	class:_atom_frm__loading={isLoading}
 	bind:this={node}
 	bind:value
 	on:input
