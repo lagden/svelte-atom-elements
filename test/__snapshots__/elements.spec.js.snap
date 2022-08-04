@@ -906,12 +906,17 @@ exports[`Text should match snapshot default 1`] = `
       class=""
     >
        
-      <input
-        class="_atom_frm__standard _atom_frm__base"
-        id="test"
-        name="test"
-        type="text"
-      />
+      <div
+        class=""
+      >
+        <input
+          class="_atom_frm__standard _atom_frm__base"
+          id="test"
+          name="test"
+          type="text"
+        />
+         
+      </div>
        
       <div
         class="_atom_frm__message"
@@ -945,13 +950,18 @@ exports[`Text should match snapshot props 1`] = `
         
       </label>
        
-      <input
-        class="_atom_frm__outline _atom_frm__base"
-        id="test"
-        name="test"
-        required=""
-        type="tel"
-      />
+      <div
+        class=""
+      >
+        <input
+          class="_atom_frm__outline _atom_frm__base"
+          id="test"
+          name="test"
+          required=""
+          type="tel"
+        />
+         
+      </div>
        
       <div
         class="_atom_frm__message"

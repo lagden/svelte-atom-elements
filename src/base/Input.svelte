@@ -35,6 +35,8 @@
 	class:_atom_frm__loading={isLoading}
 	bind:this={node}
 	bind:value
+	on:keyup
+	on:keypress
 	on:input
 	on:blur
 	on:focus

@@ -55,6 +55,8 @@
 				on:blur
 				on:focus
 				on:change
+				on:keyup
+				on:keypress
 				on:input
 				on:invalid={onInvalid}
 				on:valid={onValid}

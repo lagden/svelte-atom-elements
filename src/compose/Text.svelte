@@ -13,6 +13,7 @@
 	export let showHelper = true
 	export let helper = ''
 	export let css = ''
+	export let wrapper = ''
 	export let label = false
 	export let id = `_${uuid()}`
 
@@ -46,20 +47,23 @@
 			boldMode={$$restProps?.boldMode ?? false}
 		>{@html label}</Label>
 	{/if}
-	<Input
-		class="{styleInput} {css}"
-		bind:this={component}
-		bind:value
-		on:input
-		on:blur
-		on:focus
-		on:click
-		on:change
-		on:invalid={onInvalid}
-		on:valid={onValid}
-		{...(id ? {id} : {})}
-		{...$$restProps}
-	/>
+	<div class="{wrapper}">
+		<Input
+			class="{styleInput} {css}"
+			bind:this={component}
+			bind:value
+			on:input
+			on:blur
+			on:focus
+			on:click
+			on:change
+			on:invalid={onInvalid}
+			on:valid={onValid}
+			{...(id ? {id} : {})}
+			{...$$restProps}
+		/>
+		<slot name="output" />
+	</div>
 	<Message
 		{showHelper}
 		{showError}
