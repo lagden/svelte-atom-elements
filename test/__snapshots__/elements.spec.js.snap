@@ -327,16 +327,10 @@ exports[`Datalist should match snapshot default 1`] = `
     >
        
       <input
-        class="_atom_frm__base"
-        name="test"
-        type="hidden"
-        value=""
-      />
-       
-      <input
         class="_atom_frm__outline _atom_frm__base"
         id="test"
         list="test_list"
+        name="test"
         type="text"
       />
        
@@ -383,16 +377,10 @@ exports[`Datalist should match snapshot props 1`] = `
       </label>
        
       <input
-        class="_atom_frm__base"
-        name="test"
-        type="hidden"
-        value="Rita"
-      />
-       
-      <input
         class="_atom_frm__outline _atom_frm__base"
         id="test"
         list="test_list"
+        name="test"
         required=""
         type="text"
       />
@@ -423,9 +411,9 @@ exports[`Datalist should match snapshot props 1`] = `
       >
         <div
           class="_atom_frm__error___message"
-          title="Constraints not satisfied"
+          title=""
         >
-          Constraints not satisfied
+          
         </div>
          
         <div
