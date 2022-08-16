@@ -133,7 +133,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
       class="customCss"
     >
       <span
-        class="_atom_frm__label"
+        class="_atom_frm__label _atom_frm__label___required"
         id="test_choices_label"
       >
         Choices:
@@ -150,6 +150,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
           <input
             class="_atom_frm__checkbox"
             name="test[]"
+            required=""
             type="checkbox"
             value="a"
           />
@@ -168,6 +169,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
           <input
             class="_atom_frm__checkbox"
             name="test[]"
+            required=""
             type="checkbox"
             value="b"
           />
@@ -186,6 +188,7 @@ exports[`CheckGroup should match snapshot props 1`] = `
           <input
             class="_atom_frm__checkbox"
             name="test[]"
+            required=""
             type="checkbox"
             value="c"
           />
@@ -324,10 +327,16 @@ exports[`Datalist should match snapshot default 1`] = `
     >
        
       <input
+        class="_atom_frm__base"
+        name="test"
+        type="hidden"
+        value=""
+      />
+       
+      <input
         class="_atom_frm__outline _atom_frm__base"
         id="test"
         list="test_list"
-        name="test"
         type="text"
       />
        
@@ -374,10 +383,16 @@ exports[`Datalist should match snapshot props 1`] = `
       </label>
        
       <input
+        class="_atom_frm__base"
+        name="test"
+        type="hidden"
+        value="Rita"
+      />
+       
+      <input
         class="_atom_frm__outline _atom_frm__base"
         id="test"
         list="test_list"
-        name="test"
         required=""
         type="text"
       />
@@ -408,9 +423,9 @@ exports[`Datalist should match snapshot props 1`] = `
       >
         <div
           class="_atom_frm__error___message"
-          title=""
+          title="Constraints not satisfied"
         >
-          
+          Constraints not satisfied
         </div>
          
         <div

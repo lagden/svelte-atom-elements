@@ -11,6 +11,7 @@
 	export let optionKey = 'value'
 	export let optionValue = 'text'
 	export let value = ''
+	export let _value = ''
 	export let outline = true
 	export let showError = true
 	export let showHelper = true
@@ -19,6 +20,7 @@
 	export let label = false
 	export let id = `_${uuid()}`
 	export let list = `list_${uuid()}`
+	export let name
 
 	let className = ''
 	export {className as class}
@@ -51,20 +53,27 @@
 		>{@html label}</Label>
 	{/if}
 	<Input
+		type="hidden"
+		bind:value
+		{name}
+	/>
+	<Input
 		class="{styleInput} {css}"
 		bind:this={component}
-		bind:value
+		bind:value={_value}
 		on:blur
 		on:focus
 		on:change
 		on:input
+		on:invalid={onInvalid}
+		on:valid={onValid}
 		{list}
 		{...(id ? {id} : {})}
 		{...$$restProps}
 	/>
 	<datalist id={list}>
 		{#if Array.isArray(options) && options.length > 0}
-			{#each options as item (item[optionKey])}
+			{#each options as item (uuid())}
 				<option value={item[optionValue]} />
 			{/each}
 		{/if}

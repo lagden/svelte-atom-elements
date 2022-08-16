@@ -13,7 +13,6 @@
 	export let switchMode = false
 	export let useGroup = true
 	export let outline = false
-	export let required = false
 	export let showError = true
 	export let showHelper = true
 	export let helper = ''
@@ -63,7 +62,7 @@
 	const dispatch = createEventDispatcher()
 
 	afterUpdate(() => {
-		if (required) {
+		if ($$restProps?.required) {
 			customValidate()
 
 			if (node) {
