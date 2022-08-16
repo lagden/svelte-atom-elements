@@ -9,7 +9,7 @@
 	export let boldMode = false
 	export let alignStart = false
 
-	let _for = $$restProps?.for
+	const _for = $$restProps?.for
 
 	// CSS
 	let className = ''

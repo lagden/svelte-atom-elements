@@ -8,7 +8,7 @@
 	import Message from '../helper/Message.svelte'
 
 	export let options = []
-	export let optionKey = 'value'
+	// export let optionKey = 'value'
 	export let optionValue = 'text'
 	export let value = ''
 	export let _value = ''

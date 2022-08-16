@@ -1,6 +1,6 @@
 {
   "name": "@tadashi/svelte-atom-elements",
-  "version": "1.14.0",
+  "version": "1.14.1",
   "repository": "github:lagden/svelte-atom-elements",
   "description": "Svelte components",
   "keywords": [
@@ -25,7 +25,7 @@
   "scripts": {
     "prettier": "prettier -c --plugin-search-dir=. ./src/**/*.{svelte,js}",
     "format": "prettier --write --plugin-search-dir=. ./src/**/*.{svelte,js}",
-    "eslint": "eslint --config .eslintrc.cjs --ext .js --ignore-path .gitignore .",
+    "eslint": "eslint --config .eslintrc.cjs --ext .js,.svelte --ignore-path .gitignore .",
     "rm": "rm -rf dist",
     "esbuild": "node ./esbuild.config.js",
     "build": "run-s test rm esbuild",
